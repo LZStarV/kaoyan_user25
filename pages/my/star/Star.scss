@@ -1,0 +1,96 @@
+/* pages/my/star/Star.wxss */
+.college
+{
+  display: flex;
+  height:100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  align-items: center;
+  .college_name
+  {
+    overflow: hidden; /* 隐藏溢出部分 */
+    white-space: nowrap; /* 不换行 */
+    text-overflow: ellipsis; /* 显示省略号 */
+  }
+  .avatar
+  {
+    vertical-align: middle;
+    height:60rpx;
+    width:60rpx;
+    margin:0 20rpx;
+    border-radius: 50%;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.countdown-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.countdown {
+  font-size: 20px;
+  color: #4caf50;
+}
+
+.exam-date {
+  font-size: 16px;
+  color: #666;
+}
+
+.task-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.task-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.task-list {
+  width: 100%;
+}
+
+.task-item {
+  margin-bottom: 10px;
+}
+
+.task-name {
+  font-size: 16px;
+  color: #333;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+}

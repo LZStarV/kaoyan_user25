@@ -1,0 +1,65 @@
+<view class="header">
+<view class="mypoint">
+  <view class="my">我的积分：</view>
+  <view class="point">{{pointCount}}</view>
+</view>
+<image src="../../../images/icon/panda.png" mode=""/>
+<view class="container">
+<view class="sign" >
+  <view wx:for="{{pointList}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+    <view class="group">
+        <view class="point {{index < count ? 'active' : ''}}">+{{item}}</view>
+        <view class="day">{{index+1}}天</view>
+  </view>
+  </view>
+</view>
+<view class="tip">
+  <view class="left">
+    已连续签到<text class="day">{{count}}</text>天
+  </view>
+  <view class="right {{judgeSign?'gray':''}}" bindtap="clickSign">
+    点击签到
+  </view>
+</view>
+</view>
+</view>
+<view class="box">
+  <view class="section">
+      <view class="picker">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+  </view>
+  <view>
+    <!-- 显示星期 -->
+    <view class="week color9b">
+      <view wx:for="{{weeks_ch}}" wx:key="unique">{{item}}</view>
+    </view>
+    <view class='days'>
+      <!-- 行 -->
+      <view class="rows" wx:for="{{days.length/7}}" wx:for-index="i" wx:key="unique">
+        <!-- 列 -->
+        <view class="columns" wx:for="{{7}}" wx:for-index="k" wx:key="unique">
+          <!-- 每个月份的空的单元格 -->
+          <view class='cell' wx:if="{{days[7*i+k].date == null}}">
+            <text decode="{{true}}">&nbsp;&nbsp;</text>
+          </view>
+          <!-- 每个月份的有数字的单元格 -->
+          <view class='cell' wx:else>
+            <!-- 当前日期已签到 -->
+            <view wx:if="{{days[7*i+k].isSign == true}}" class='qianbg'>
+              <text class="colorff">{{days[7*i+k].date}}</text>
+              <text class="sourse">+{{days[7*i+k].Score}}</text>
+            </view>
+            <!-- 当前日期未签到 -->
+            <view wx:else>
+              <view wx:if="{{days[7*i+k].date > day}}" class='gray'>
+                <text>{{days[7*i+k].date}}</text>
+              </view>
+              <view wx:else>
+                <text>{{days[7*i+k].date}}</text>
+              </view> 
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

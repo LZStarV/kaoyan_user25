@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* pages/index/banner/banner.wxss */
+/* 轮播图 */
+.swiper-box {
+  position: relative;
+}
+
+.swiper-box .swiper {
+  height: 320rpx;
+  overflow: hidden;
+}
+
+.swiper-box .swiper-item {
+  height: 320rpx;
+  overflow: hidden;
+}
+
+.swiper-box .swiper-item .img,
+.swiper-box .swiper-item .navigator {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-box .indicator {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16rpx;
+}
+
+.swiper-box .indicator .rectangle {
+  width: 30rpx;
+  height: 6rpx;
+  margin: 0 8rpx;
+  border-radius: 6rpx;
+  background-color: rgba(233, 228, 228, 0.9);
+}
+
+.swiper-box .indicator .active {
+  background-color: #fd7427;
+  width: 40rpx;
+}

@@ -1,0 +1,58 @@
+<view class="header">
+  <view class="search" bindtap="gotoCollegeSearch">
+    <image src="/images/home/search.png" />
+    <input type="text" placeholder="搜索"/>
+  </view>
+  <!--顶部选择院校类型-->
+  <view class="college-type">
+  <scroll-view class="scroll-wrapper" scroll-x scroll-with-animation="true" scroll-into-view="item{{currentType < 4 ? 0 : currentType - 3}}" >
+    <view class="navigate-item" id="{{index}}" wx:for="{{collegeType}}" wx:key="index" data-index="{{index}}" bindtap="click_type">
+      <view class="names {{currentType === index ? 'active' : ''}}">{{item.name}}</view>
+      <view class="currtline {{currentType === index ? 'active' : ''}}"></view>
+    </view>
+  </scroll-view>
+  <view class="select">
+  <view class="vertical-line" ></view>
+  <view class="content" bindtap="click_select_pop">筛选</view>
+  <view class="{{showSelect?'icon-down':'icon-down'}}" bindtap="click_select_pop"></view>
+</view>
+</view>
+</view>
+<view class="middle">
+<!--选择省份-->
+<view class="left">
+  <view class="province"  wx:for="{{province}}" wx:key="index" wx:for-index="index" wx:for-item="item" data-index="{{index}}" bindtap="click_province">
+    <view class="{{currentProvinceIndex===index?'active':''}}">
+      {{item}}
+    </view>
+  </view>
+</view>
+<!--展示学校-->
+<scroll-view class="right" scroll-y="true" bindscrolltolower="onScroll">
+  <view class="college" wx:for="{{collegeList}}" wx:key="index" wx:for-index="index" wx:for-item="item" data-index="{{index}}" data-id="{{item.id}}" bindtap="gotoDetail">
+    <image class="avatar" src="{{item.avatar}}" mode=""/>
+    <view class="college_name {{currentProvince === index ? 'active' : ''}}">
+      {{item.name}}
+    </view>
+  </view>
+</scroll-view>
+</view>
+<view wx:if="{{showSelect}}" class="select_pop">
+  <image class="close" bindtap="click_close" src="/images/icon/close.png" mode=""/>
+  <view class="title">院校类型</view>
+  <view class="grid-container1">
+    <view class="{{currentSubject === index ? 'active' : 'grid-item'}}"  wx:for="{{subjectType}}" wx:key="index" wx:for-index="index" wx:for-item="item" data-index="{{index}}" bindtap="click_subject_type">
+   {{item}}</view>
+  </view>
+  <view class="title">院校隶属</view>
+  <view class="grid-container2">
+    <view class="{{currentBelong === index ? 'active' : 'grid-item'}}"  wx:for="{{belongType}}" wx:key="index" wx:for-index="index" wx:for-item="item" data-index="{{index}}" bindtap="click_belong_type">
+   {{item}}</view>
+  </view>
+  <view class="button">
+    <view class="reset" bindtap="click_reset">重置</view>
+    <view class="confirm" bindtap="click_confirm">确定</view>
+  </view>
+</view>
+  <!-- 遮罩 -->
+  <view class="{{isfull ?'fullbg':''}}" bindtap="hidebg"></view>

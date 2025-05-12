@@ -1,0 +1,16 @@
+<view class="content">
+  <view class="title">{{resourceInfo.title}}</view>
+  <view class="detail">
+    <view class="downLoadNum">下载量：{{resourceInfo.downloadCount}}</view>
+    <view class="description">文字描述：{{resourceInfo.description}}</view>
+    <view>上传时间：{{resourceInfo.updateTime}}</view>
+    <view>文件大小：{{resourceInfo.size}}</view>
+    <view>来源：{{resourceInfo.from==='1'?'管理员提供':'用户提供'}}</view>
+    <view>格式：{{resourceInfo.form}}</view>
+  </view>
+</view>
+
+<view class="download" bindtap = "downLoad">
+  <image src="../../../images/exam/download_white.png"></image>
+  <text class="tip">下载</text>
+</view>

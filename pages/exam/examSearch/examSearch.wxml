@@ -1,0 +1,30 @@
+<view class="header">
+  <view class="search-container">
+    <view class="search-left">
+      <image src="../../../images/home/search.png" />
+      <input type="text" placeholder="搜索真题" value="{{searchQuery}}" bindinput="onInputChange"/>
+    </view>
+  </view>  
+  <view class="search-button" bindtap="searchExam">
+    搜索
+  </view>
+  </view>
+  <view class="middle">
+    <view class="exam-block" wx:for="{{ examList }}" wx:key="index" bindtap="gotoExamDetail" data-id="{{ item.id }}">
+        <view class="exam-title">{{ item.title }}</view>
+        <view class="tag">
+          <view class="category" style="background :{{subjectMap[item.type]['color']}}">
+            <image src="{{ subjectMap[item.type]['imageUrl'] }}"></image>
+            <view class="categoryName">{{subjectMap[item.type]['name']}}</view>
+        </view>
+        <view class="download">
+          <image src="../../images/exam/download.png"></image>
+          <text>下载</text>
+          <view class=" downLoadNum">{{item.downloadCount}}</view>
+        </view>
+    </view>
+    </view>
+  </view>
+<view wx:if="{{isFinish}}" class="tip">
+  暂无相关记录
+</view>

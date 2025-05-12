@@ -1,0 +1,16 @@
+<view class="article-block" wx:for="{{ articleList }}" wx:key="index" bindtap="gotoArticleDetail" data-id="{{ item[dataKey] }}">
+  <view class="article">
+    <view>
+      <view class="article-title">{{ item.title }}</view>
+      <view class="article-text">{{item.outline}}</view>
+      <view class="article-other">
+          <view>{{item.username}}</view>
+          <view class="article-time">{{ item.updateTime||item.createTime }}</view>
+      </view>
+    </view>
+    <view>
+      <image class="cover" src="{{item.cover}}" mode=""/>
+    </view>
+  </view>
+  <!-- <image class="article-image" src="{{ item.cover }}"></image> -->
+</view>

@@ -1,0 +1,490 @@
+.hidden
+{
+  height: 100vh;
+}
+.header
+{
+  height:190rpx;
+  background: linear-gradient(to right, #edf5ff,#f3f3ff);
+  overflow: hidden;
+  .contanier
+  {
+    margin: 40rpx 20rpx 0rpx 20rpx;
+    display: flex;
+    align-items: center;
+    .avatar
+    {
+      height:100rpx;
+      width:100rpx;
+      border-radius: 50%;
+    }
+    .desc
+    {
+      height:120rpx;
+      margin-left: 20rpx;
+      width:90%;
+      .star
+      {
+        height:30rpx;
+        width:30rpx;
+        float: right;
+      }
+      .name
+      {
+        font-size:32rpx;
+        margin: 15rpx 0rpx 10rpx 0rpx;
+      }
+      .title
+      {
+        display: inline-block;
+        background-color: #8eb4f8;
+        color:#ffffff;
+        margin-right: 10rpx;
+        padding:1rpx 8rpx 4rpx 8rpx;
+        border-radius: 10rpx;
+        font-size: 24rpx;
+      }
+      .other
+      {
+        margin-top: 20rpx;
+        font-size: 28rpx;
+        color:#5b5a5e;
+        display: flex;
+        .code
+        {
+          margin-left: 20rpx;
+        }
+      }
+    }
+  }
+
+}
+.scroll-wrapper {
+  white-space: nowrap;
+  height: 90rpx;
+  box-sizing: border-box;
+}
+
+.navigate-item {
+  display: inline-block;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 10rpx;
+  width:33.3%;
+}
+
+.names {
+  font-size: 28rpx;
+  color: #3c3c3c;
+}
+
+.names.active {
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.currtline {
+  margin: -8rpx auto 0 auto;
+  width: 60rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+}
+
+.currtline.active {
+  background: #ff3f29;
+  transition: all .3s;
+}
+
+.info
+{
+  width:94%;
+  margin: 10rpx auto;
+  font-size:28rpx;
+  line-height:50rpx;
+  color:#504f4f;
+}
+.subject
+{
+.search{
+  width:90%;
+  margin: 20rpx auto;
+  background-color:#f2f3f5 ;
+  border-radius: 40rpx;
+  padding:5rpx 10rpx;
+}
+.search image{
+  width: 40rpx;
+  height: 40rpx;
+  padding: 10rpx 20rpx;
+  vertical-align: middle;
+}
+.search input{
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 88rpx);
+}
+}
+.nav-container
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100rpx, 1fr));
+  grid-auto-rows: 1fr; /* 高度与宽度相等 */
+  margin-top: 20rpx;
+  padding-bottom:15rpx;
+  border-bottom: 1rpx solid #dddddd;
+}
+.nav {
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.content {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #1b1b1a;
+}
+
+.icon {
+  display: inline-block;
+  border: 10rpx solid transparent;
+  border-top: 10rpx solid #666;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+.button-container
+{
+  margin-top: 30rpx;
+  margin-left:20rpx;
+  .button
+  {
+    display: inline-block;
+    margin-right: 40rpx;
+    color:#9c9c9c;
+    padding: 6rpx 24rpx;
+    font-size:28rpx;
+    border-radius: 40rpx;
+  }
+  .active
+  {
+    border: 1rpx solid #ff4b36;
+
+    color:#ff4b36;
+  }
+}
+.detail_info
+{
+  width:90%;
+  height:120rpx;
+  margin: auto;
+  font-size: 30rpx;
+  overflow: scroll;
+  padding:10rpx;
+  border-bottom: 1rpx solid #dfdfdf;
+  .top
+  {
+    margin-top: 20rpx;
+    .tag
+    {
+      font-size: #fff7f5;
+      padding: 0rpx 10rpx;
+      border-radius: 10rpx;
+      color:#fff;
+      font-size: 24rpx;
+      margin-left:20rpx;
+      position: relative;
+      bottom:6rpx;
+    }
+    .xue
+    {
+      background: linear-gradient(to right, #ff866e, #ff6f5b);
+    }
+    .zhuan
+    {
+      background: linear-gradient(to right, #f79d62, #f4945a);
+    }
+  }
+  .bottom
+  {
+    margin-top: 10rpx;
+    color:#aaaaaa;
+    font-size: 24rpx;
+    .department
+    {
+      float: right;
+      font-size:24rpx;
+      color:#d1d1d1;
+      position: relative;
+      top:8rpx;
+    }
+  }
+}
+.pop
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; /* 确保宽度填满 */
+  background-color:#f8f8f8;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  overflow: hidden;
+  z-index: 2; /* Tip 的 z-index，应大于遮罩的 z-index */
+  .cancel_other
+  {
+    margin-top: 20rpx;
+  }
+}
+.pop1
+{
+  height: 86vh;
+  background: #fff;
+  .top
+  {
+    height:6vh;
+    line-height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .cancel
+    {
+      color:#acacac;
+      width:25%;
+      margin:auto;
+      text-align: center;
+      text-align: center;
+    }
+    .title
+    {
+      text-align: center;
+      font-size:32rpx;
+      font-weight: bold;
+      flex: 1; 
+      text-align: center;
+      position: relative;
+      right:30rpx;
+    }
+    .confirm
+    {
+      color:#dd6c64;
+      margin-right:20rpx;
+    }
+  }
+  .bottom
+  {
+    display: flex;
+  }
+  .left
+  {
+    width:25%;
+    height:80vh;
+    overflow: scroll;
+    background-color: #f4f4f4;
+    .subject
+    {
+      text-align:center;
+      line-height: 80rpx;
+      height:80rpx;
+      position:relative;
+    .active
+    {
+      background-color: #f6f7fb;
+      height:80rpx;
+      font-weight: bold;
+      font-size: 32rpx;
+    }
+    .active::before {
+      content: " ";
+      position: absolute;
+      left: 0rpx; 
+      width: 6rpx; 
+      height: 80%; 
+      top:10%;
+      background-color:#ff3f29 ; 
+    }
+    }
+  }
+  .right
+  {
+    width:75%;
+    padding-left:30rpx;
+    height:80vh;
+    overflow: scroll;
+    .sub_subject
+    {
+      line-height: 80rpx;
+      padding-right:20rpx;
+      height:80rpx;
+      display:flex;
+      justify-content:space-between;
+    }
+    .active
+    {
+      color:#df6057;
+    }
+  }
+}
+.pop2
+{
+  height: 500rpx;
+}
+.pop3
+{
+  height: 600rpx;
+}
+.pop4
+{
+  height: 700rpx;
+}
+.item
+{
+  background-color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  height:100rpx;
+  line-height:100rpx;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+  .share
+{
+width:86%;
+margin:auto;
+height:460rpx;
+border: 1rpx solid #ececec;
+border-radius: 20rpx;
+box-shadow: 4rpx 4rpx 4rpx 4rpx rgba(228, 227, 227, 0.3);
+margin-bottom:30rpx;
+.top
+{
+  width:90%;
+  margin: auto;
+  padding:20rpx;
+  border-bottom: 1rpx solid #ececec;
+  display: flex;
+  .avatar
+  {
+    width:120rpx;
+    height:120rpx;
+    border-radius: 50%;
+  }
+  .intro
+  {
+    margin-left: 20rpx;
+    .name
+    {
+      font-size:28rpx;
+      margin-bottom: 5rpx;
+    }
+    .tag
+    {
+      font-size: 22rpx;
+      padding:4rpx 10rpx;
+      border-radius: 10rpx;
+      color:#6b5540;
+      background-color: #fde5c9;
+    }
+    .other
+    {
+      margin-top: 15rpx;
+      font-size: 26rpx;
+      color:#424242;
+      .line
+      {
+        margin:0 20rpx;
+      }
+    }
+  }
+}
+.bottom
+{
+  width:90%;
+  margin:auto;
+  margin-top: 20rpx;
+  padding-bottom:20rpx;
+  border-bottom: 1rpx solid #ececec;
+  .title
+  {
+    color:#3a3939;
+    font-size: 29rpx;
+    font-weight: bold;
+  }
+  .content
+  {
+    margin-top: 20rpx;
+    font-size:26rpx;
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 显示三行 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.8; /* 根据需要调整 */
+  height: 5em; /* 高度应适应行高和行数 */
+  }
+}
+.util
+{
+  margin: 20rpx auto;
+  width:90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  image{
+  height:40rpx;
+  width:40rpx;
+  }
+  .likes
+  {
+    display: flex;
+    align-items: center;
+    .like
+    {
+      margin-left:10rpx;
+      font-size: 24rpx;
+      color:#6b6b6b;
+    }
+  }
+}
+}
+.hidden
+{
+  height: 100vh;
+  overflow-y: hidden;
+}
+.fullbg {
+  position: fixed;
+  top: 0rpx;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgb(1, 1, 1);
+  transition: all 2s;
+  opacity: 0.5;
+}
+.star_pop
+{
+  position: absolute;
+  bottom: 50vh;
+  background-color: #4c4c4c;
+  padding:20rpx 30rpx ;
+  border-radius: 20rpx;
+  left: 50%;//将元素的左边界设置在父容器的50%位置。
+  transform: translateX(-50%);//将元素在水平方向上向左移动自身宽度的50%
+  color:#fff;
+  text-align: center;
+  font-size: 26rpx;
+  white-space: normal; /* 允许换行 */
+  word-wrap: break-word; /* 防止长单词溢出 */
+  line-height: 40rpx;
+}
+.success
+{
+  width: 300rpx;
+}
+.cancel
+{
+  width:150rpx;
+}

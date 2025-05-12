@@ -1,0 +1,46 @@
+<!--pages/my/star/Star.wxml-->
+<view wx:if="{{ischeck}}">
+  <view class="container">
+    <view class="header">
+      <text class="title">考研倒计时</text>
+    </view>
+  
+    <view class="countdown-section">
+      <text class="countdown">距离考研还有 {{days}} 天</text>
+      <text class="exam-date">考试日期：{{examDate}}</text>
+    </view>
+  
+    <view class="task-section">
+      <text class="task-title">今日任务</text>
+      <view class="task-list">
+        <block wx:for="{{tasks}}" wx:key="id">
+          <view class="task-item">
+            <text class="task-name">{{item.name}}</text>
+            <view class="progress-bar">
+              <view class="progress" style="width: {{item.progress}}%;"></view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:else>
+  <navWrapper navList="{{navList}}" bind:tabChange="handleTabChange"/>
+
+  <view hidden="{{type==2}}">
+    <!--资讯-->
+    <article articleList="{{articleList}}" dataKey="postOrSchoolId"/>
+  </view>
+  
+  <view hidden="{{type==1}}">
+    <!--院校列表-->
+    <view class="college" wx:for="{{collegeList}}" wx:key="index" wx:for-index="index" wx:for-item="item" data-index="{{index}}" data-id="{{item.postOrSchoolId}}" bindtap="gotoDetail">
+      <image class="avatar" src="{{item.cover}}" mode=""/>
+      <view class="college_name {{currentProvince === index ? 'active' : ''}}">
+        {{item.title}}
+      </view>
+    </view>
+  </view>
+  
+</view>

@@ -1,0 +1,18 @@
+<view class="header">
+  <view class="search-container" bindtap = "gotoSearch">
+    <view class="search-left">
+      <image src="../../../images/home/search.png" />
+      <input type="text" placeholder="搜索院校" value="{{searchQuery}}" bindinput="onInputChange"/>
+    </view>
+  </view>  
+  <view class="search-button" bindtap="searchCollege">
+    搜索
+  </view>
+  </view>
+<!--院校列表-->
+<view class="college" wx:for="{{collegeList}}" wx:key="index" wx:for-index="index" wx:for-item="item" data-index="{{index}}" data-id="{{item.id}}" bindtap="gotoDetail">
+<image class="avatar" src="{{item.avatar}}" mode=""/>
+<view class="college_name {{currentProvince === index ? 'active' : ''}}">
+      {{item.name}}
+</view>
+</view>

@@ -1,0 +1,7 @@
+<view class="container">
+  <image src="/images/icon/avatar.png" class="avatar"></image>
+  <text class="description">请点击下方的按钮，授权登录您的账户～</text>
+  <button bindtap="login" class="bottom-button" loading="{{loading}}" type="primary">
+    点击授权登录
+  </button>
+</view>

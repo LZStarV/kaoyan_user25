@@ -1,0 +1,158 @@
+<view class="{{isfull?'hidden':''}}">
+<view class="header">
+  <view class="contanier">
+    <image class="avatar" src="{{info.avatar}}" mode=""/>
+    <view class="desc">
+      <view class="name">{{info.name}}
+        <image wx:if="{{!starJudge}}" class="star" src="/images/icon/star.png" bindtap="click_star">
+        </image>
+        <image wx:else class="star" src="/images/icon/star_red.png" 
+        bindtap="click_star">
+        </image>
+      </view>
+      <view class="title"  wx:for="{{title}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+        {{item}}
+      </view>
+      <view class="other">
+        <!-- <view class="site">{{info.location}}</view> -->
+        <!-- <view class="code">院校代码：10001</view> -->
+      </view>
+    </view>
+  </view>
+</view>
+<scroll-view class="scroll-wrapper" scroll-x scroll-with-animation="true" scroll-into-view="item{{currentType < 4 ? 0 : currentType - 3}}" >
+  <view class="navigate-item" id="{{index}}" wx:for="{{infoType}}" wx:key="index" data-index="{{index}}" bindtap="click_infoType">
+    <view class="names {{current_infoType === index ? 'active' : ''}}">{{item}}</view>
+    <view class="currtline {{current_infoType === index ? 'active' : ''}}"></view>
+  </view>
+</scroll-view>
+
+<!--院校信息-->
+<view class="info">
+  <rich-text wx:if="{{current_infoType === 0}}"  nodes="{{introInfo}}"></rich-text>
+</view>
+<!--院系专业-->
+<view wx:if="{{current_infoType === 1}}">
+<view class="subject" >
+<view class="search" bindtap="gotoCollegeSearch">
+  <image src="/images/home/search.png" />
+  <input type="text" placeholder="搜索专业" />
+</view>
+</view>
+<view class="nav-container">
+  <view class="nav {{detail_type_Index == index? 'active' : ''}}" data-index="{{index}}" wx:key="index" wx:for="{{detailType}}" wx:for-index="index" wx:for-item="item"  bindtap="click_detailType"  >
+    <view class="content">{{item}}</view>
+    <view class="icon"></view>
+  </view>
+  </view>
+
+<!--选择学硕还是专硕-->
+<view class="button-container">
+<view class="button {{button_Index == index? 'active' : ''}}" wx:key="index" wx:for="{{buttonType}}" wx:for-index="index" wx:for-item="item" data-index="{{index}}" bindtap="click_masterType">
+  {{item}}
+</view>
+</view>
+<view  class="detail_info"  wx:for="{{subjectInfoList}}" wx:key="index" wx:for-index="index" wx:for-item="item" data-index="{{index}}" bindtap="gotoSubjectDetail">
+  <view class="top">
+    <span>({{item.code}})</span>
+    <span>{{item.name}}</span>
+    <span class="tag {{item.masterType===1?'xue':'zhuan'}}">{{item.masterType===1?"学硕":"专硕"}}</span>
+  </view>
+  <view class="bottom">
+    <span>{{item.fieldName}}-{{item.disciplineName}}</span>
+    <span class="department">{{item.collegue}}</span>
+  </view>
+</view>
+</view>
+
+<!--院系专业选择的弹框-选择学科门类-->
+<view wx:if="{{detail_type_Index === 0 && isfull}}" class="pop1 pop">
+  <view class="top">
+    <span class="cancel" bindtap="click_cancel">取消</span>
+    <span class="title">学科门类</span>
+    <span class="confirm" bindtap="click_confirm">确定</span>
+  </view>
+  <view class="bottom">
+  <view class="left">
+    <view  class="subject " wx:for="{{type_of_subjects}}" wx:key="index" wx:for-index="index" wx:for-item="item" bindtap="click_subject_type"
+    data-index="{{index}}">
+      <view class="{{subject_type_Index === index ? 'active' : ''}}">
+      {{item.name}}
+    </view>
+    </view>
+  </view>
+  <view class="right">
+    <view  class="sub_subject {{sub_subject_type_Index === index ? 'active' : ''}}" data-index="{{index}}" wx:for="{{type_of_sub_subjects}}" wx:key="index" wx:for-index="index" wx:for-item="item" bindtap="click_sub_subject_type">
+      <text>{{item.disciplineName}}</text>
+      <text wx:if="{{sub_subject_type_Index === index}}">√</text>
+    </view>
+  </view>
+</view>
+</view>
+</view>
+
+<!--选择学习方式-->
+<view wx:if="{{detail_type_Index === 1 && isfull}}" class="pop2 pop">
+  <view class="item"  wx:for="{{way}}" wx:key="index" data-index="{{index}}"
+  bindtap="click_way">
+    {{item}}
+  </view>
+  <view class="item cancel_other" bindtap="click_cancel">取消</view>
+</view>
+
+<!--选择外语类型-->
+<view wx:if="{{detail_type_Index === 2 && isfull}}" class="pop3 pop">
+  <view class="item"  wx:for="{{english}}" wx:key="index" data-index="{{index}}" bindtap="click_english">
+    {{item}}
+  </view>
+  <view class="item cancel_other" bindtap="click_cancel">取消</view>
+</view>
+
+<!--选择数学类型-->
+<view wx:if="{{detail_type_Index === 3 && isfull}}" class="pop4 pop">
+  <view class="item"  wx:for="{{math}}" wx:key="index" data-index="{{index}}" bindtap="click_math">
+    {{item}}
+  </view>
+  <view class="item cancel_other" bindtap="click_cancel">取消</view>
+</view>
+
+<!-- 学长学姐说
+<view wx:if="{{current_infoType === 2}}">
+  <view class="share" wx:for="{{share}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+    <view class="top">
+      <view class="intro">
+        <view class="name">{{item.name}}</view>
+        <span class="tag">{{item.tag}}</span>
+        <view class="other">
+          <span class="other">{{item.university}}</span>
+          <span class="line">|</span>
+          <span class="subject">{{item.subject}}</span>
+        </view>
+      </view>
+    </view>
+    <view class="bottom">
+      <view class="title">{{item.title}}</view>
+      <view class="content">{{item.content}}</view>
+    </view>
+    <view class="util">
+      <view class="likes" bindtap="click_like" data-index="{{index}}">
+        <image wx:if="{{likeIndex===index&&likeJudge}}" src="../../../../images/icon/like_red.png" mode=""/>
+        <image wx:else src="../../../../images/icon/like.png" mode=""/>
+        <span class="like">{{item.like}}</span>
+      </view>
+      <image src="../../../../images/icon/concat.png" mode=""/>
+    </view>
+  </view>
+</view> -->
+
+
+<!--遮罩-->
+<view class="{{isfull ?'fullbg':''}}" bindtap="hidebg"></view>
+
+<view wx:if="{{showSuccess&&clickshow}}" class="star_pop sussess">
+  <span>收藏成功，请到个人中心查看</span>
+</view>
+
+<view wx:if="{{!showSuccess&&clickshow}}" class="star_pop cancel">
+  <span>已取消收藏</span>
+</view>

@@ -1,0 +1,23 @@
+<view class="header">
+  提交反馈
+</view>
+<view class="middle">
+  <view class="question">
+    <textarea placeholder="输入反馈描述，便于我们沟通和解决问题" placeholder-class="placeholder-style" maxlength="-1" class="custom-textarea" value="{{feedback}}" data-name="feedback" bindinput="handleInput">
+  </textarea>
+    <!-- 添加图片按钮 -->
+    <view class="upload_img" bindtap="handleChooseImg">
+      <span wx:if="{{imageUrl === ''}}">+</span>
+      <span wx:else>
+        <image src="{{imageUrl}}" class="show_image" mode="aspectFit" lazy-load="false"></image>
+      </span>
+    </view>
+  </view>
+  <!-- <view class="contact">
+    <span>联系方式：</span>
+    <input class="input" name="phone" type="number" placeholder="请输入QQ号或手机号" value="{{contact}}" data-name="contact" bindinput="handleInput" auto-focus="true" />
+  </view> -->
+</view>
+<view class="submit" bindtap="submitInfo">
+  提交反馈
+</view>

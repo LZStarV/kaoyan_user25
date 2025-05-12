@@ -1,0 +1,138 @@
+@import './skeleton/Home.skeleton.wxss';
+
+.header
+{
+  height:95rpx;
+  background-image: linear-gradient(to top, #fdebe6 0%, #fdf0ea 100%);
+  display: flex;
+  position:fixed;
+  align-items: center;
+  justify-content: space-evenly;
+  width:100%; 
+  top:0; 
+  z-index:999;
+  .days
+  {
+    margin-left: 6rpx;
+    display:flex;
+    align-items: center;
+    .day
+     {
+        font-size:55rpx;
+        margin-right:10rpx;
+      }
+    .year
+    {
+      font-size: 20rpx;
+      line-height: 30rpx;
+      color:#67635b;
+    }
+  }
+  .search-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    flex:1;
+    margin: auto ;
+    margin-left:10rpx;
+    .search-left{
+      background-color: rgb(255, 255, 255);
+      flex: 2;
+      border-radius: 40rpx;
+      padding-right: 40rpx;
+      box-sizing: border-box;
+    }
+    .search-left image{
+      width: 48rpx;
+      height: 48rpx;
+      padding: 10rpx 10rpx;
+      vertical-align: middle;
+    }
+    .search-left input{
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 88rpx);
+    }
+  }
+    .avatar{
+      margin: auto 15rpx;
+    }
+    .avatar image{
+      width: 60rpx;
+      height: 60rpx;
+      vertical-align: middle;
+    }  
+}
+
+.goTop{
+  position: fixed;
+  bottom: 80rpx;
+  right: 60rpx; 
+  z-index: 9;
+}
+
+.qiandao
+{
+  position: fixed;
+  bottom: 180rpx;
+  right: 60rpx; 
+  z-index: 9;
+}
+
+
+
+.endReached
+{
+  height:100rpx;
+  line-height: 100rpx;
+  color:#bdbdbd;
+  font-size: 28rpx;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #8e44ad, #ff5252);
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.sentence {
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease-in forwards;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.share-btn {
+  background-color: #2ecc71;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

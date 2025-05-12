@@ -1,0 +1,51 @@
+page
+{
+  background: #f6f6f6;
+}
+.content
+{
+  height:600rpx;
+  background: #ffffff;
+  margin: 30rpx auto;
+  width:90%;
+  border-radius: 20rpx;
+  padding: 35rpx 20rpx 20rpx 20rpx;
+  .title
+  {
+    font-weight: bolder;
+    font-size: larger;
+  }
+  .detail
+  {
+    color:#53524f;
+    line-height:80rpx;
+    font-size:28rpx;
+  }
+  .description
+  {
+    line-height: 36rpx;
+    padding-top:25rpx;
+    padding-bottom: 15rpx;
+  }
+}
+.download
+{
+  margin:50rpx auto;
+  width:94%;
+  height:90rpx;
+  background-color: #ff7214;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#ffffff;
+  image
+  {
+    width:60rpx;
+    height:60rpx;
+  }
+  .tip
+  {
+    margin-left:8rpx;
+  }
+}

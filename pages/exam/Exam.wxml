@@ -1,0 +1,66 @@
+<view wx:if="{{ischeck}}">
+  <view class="container">
+    <view class="header">
+      <text class="title">每日激励</text>
+    </view>
+  
+    <view class="quote-section">
+      <text class="quote">{{currentQuote.quote}}</text>
+      <text class="author">{{currentQuote.author}}</text>
+    </view>
+  
+    <view class="buttons">
+      <button bindtap="randomQuote" class="random-button">随机语录</button>
+    </view>
+  </view>
+</view>
+<view wx:else>
+<view class="header">
+  <view class="search" bindtap="gotoExamSearch">
+    <image src="../../images/home/search.png" />
+    <input type="text" placeholder="搜索" bindconfirm="onInputConfirm"/>
+  </view>
+  <view class="{{time_open||type_open ? 'line-nav-fixed' : 'line-nav'}}">
+    <view class="nav" >
+      <view class="nav-son {{shownavindex == 1? 'active' : ''}}" bindtap="click_time" data-nav="1">
+        <view class="content">{{year_lists[selectedTimeIndex]}}</view>
+        <view class="icon"></view>
+      </view>
+      <view class="nav-son {{shownavindex == 2? 'active' : ''}}" bindtap="click_type" data-nav="2">
+        <view class="content">{{!type_open?'考试类型':typeArray[selectedTypeIndex]}}</view>
+        <view class="icon"></view>
+      </view>
+    </view>
+</view>
+</view>
+<view class="temp subject_choice {{time_open ? 'slidown' : 'slidup'}}">
+  <view wx:for="{{year_lists}}" wx:key="index" wx:key="index" bindtap="selectTime" data-index="{{index}}" class="select {{index === selectedTimeIndex ? 'selected' : ''}}">
+     <text>{{item}}</text>
+     <text wx:if="{{index === selectedTimeIndex}}">√</text>
+ </view>
+</view>
+<view class="temp subject_choice {{type_open ? 'slidown' : 'slidup'}}">
+  <view wx:for="{{typeArray}}" wx:key="index" wx:key="index" bindtap="selectType" data-index="{{index}}" class="select {{index === selectedTypeIndex ? 'selected' : ''}}">
+     <text>{{item}}</text>
+     <text wx:if="{{index === selectedTypeIndex}}">√</text>
+ </view>
+</view>
+  <!-- 遮罩 -->
+<view class="{{isfull ?'fullbg':''}}" bindtap="hidebg"></view>
+<view class="middle">
+<view class="exam-block" wx:for="{{ examList }}" wx:key="index" bindtap="gotoExamDetail" data-id="{{ item.id }}">
+    <view class="exam-title">{{ item.title }}</view>
+    <view class="tag">
+      <view class="category" style="background :{{subjectMap[item.type]['color']}}">
+        <image src="{{ subjectMap[item.type]['imageUrl'] }}"></image>
+        <view class="categoryName">{{subjectMap[item.type]['name']}}</view>
+    </view>
+    <view class="download">
+      <image src="https://ezcatcat-javaweb-test.oss-cn-guangzhou.aliyuncs.com/43aec88b-92bc-4665-9b62-55c7032038e9.png"></image>
+      <text>下载</text>
+      <view class=" downLoadNum">{{item.downLoadCount}}</view>
+    </view>
+</view>
+</view>
+</view>
+</view>

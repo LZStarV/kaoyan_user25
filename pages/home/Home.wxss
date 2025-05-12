@@ -1,0 +1,277 @@
+@charset "UTF-8";
+/*
+此文件为开发者工具生成，生成时间: 2024/8/27下午1:19:21
+
+在 F:\kaoyan\kaoyan_user\pages\home\Home.wxss 中引入样式
+```
+@import "./Home.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+*/
+.sk-transparent {
+  color: transparent !important;
+}
+
+.sk-text-14-2857-91 {
+  background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+  background-size: 100% 58.6047rpx;
+  position: relative !important;
+}
+
+.sk-text {
+  background-origin: content-box !important;
+  background-clip: content-box !important;
+  background-color: transparent !important;
+  color: transparent !important;
+  background-repeat: repeat-y !important;
+}
+
+.sk-text-14-2857-366 {
+  background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+  background-size: 100% 31.7442rpx;
+  position: relative !important;
+}
+
+.sk-text-14-2857-197 {
+  background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+  background-size: 100% 34.1860rpx;
+  position: relative !important;
+}
+
+.sk-text-14-2857-679 {
+  background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+  background-size: 100% 34.1860rpx;
+  position: relative !important;
+}
+
+.sk-text-14-2857-639 {
+  background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+  background-size: 100% 34.1860rpx;
+  position: relative !important;
+}
+
+.sk-text-14-2857-511 {
+  background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+  background-size: 100% 34.1860rpx;
+  position: relative !important;
+}
+
+.sk-text-31-3725-400 {
+  background-image: linear-gradient(transparent 31.3725%, #EEEEEE 0%, #EEEEEE 68.6275%, transparent 0%) !important;
+  background-size: 100% 88.9535rpx;
+  position: relative !important;
+}
+
+.sk-text-34-3137-540 {
+  background-image: linear-gradient(transparent 34.3137%, #EEEEEE 0%, #EEEEEE 65.6863%, transparent 0%) !important;
+  background-size: 100% 88.9535rpx;
+  position: relative !important;
+}
+
+.sk-text-34-3137-222 {
+  background-image: linear-gradient(transparent 34.3137%, #EEEEEE 0%, #EEEEEE 65.6863%, transparent 0%) !important;
+  background-size: 100% 88.9535rpx;
+  position: relative !important;
+}
+
+.sk-text-34-3137-271 {
+  background-image: linear-gradient(transparent 34.3137%, #EEEEEE 0%, #EEEEEE 65.6863%, transparent 0%) !important;
+  background-size: 100% 88.9535rpx;
+  position: relative !important;
+}
+
+.sk-text-34-3137-977 {
+  background-image: linear-gradient(transparent 34.3137%, #EEEEEE 0%, #EEEEEE 65.6863%, transparent 0%) !important;
+  background-size: 100% 88.9535rpx;
+  position: relative !important;
+}
+
+.sk-text-14-2857-858 {
+  background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+  background-size: 100% 41.5116rpx;
+  position: relative !important;
+}
+
+.sk-text-14-2857-587 {
+  background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+  background-size: 100% 41.5116rpx;
+  position: relative !important;
+}
+
+.sk-text-14-2857-526 {
+  background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+  background-size: 100% 41.5116rpx;
+  position: relative !important;
+}
+
+.sk-text-14-2857-753 {
+  background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+  background-size: 100% 41.5116rpx;
+  position: relative !important;
+}
+
+.sk-text-14-2857-939 {
+  background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+  background-size: 100% 41.5116rpx;
+  position: relative !important;
+}
+
+.sk-text-14-2857-23 {
+  background-image: linear-gradient(transparent 14.2857%, #EEEEEE 0%, #EEEEEE 85.7143%, transparent 0%) !important;
+  background-size: 100% 41.5116rpx;
+  position: relative !important;
+}
+
+.sk-image {
+  background: #EFEFEF !important;
+}
+
+.sk-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.header {
+  height: 95rpx;
+  background-image: linear-gradient(to top, #fdebe6 0%, #fdf0ea 100%);
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.header .days {
+  margin-left: 6rpx;
+  display: flex;
+  align-items: center;
+}
+
+.header .days .day {
+  font-size: 55rpx;
+  margin-right: 10rpx;
+}
+
+.header .days .year {
+  font-size: 20rpx;
+  line-height: 30rpx;
+  color: #67635b;
+}
+
+.header .search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  flex: 1;
+  margin: auto;
+  margin-left: 10rpx;
+}
+
+.header .search-container .search-left {
+  background-color: white;
+  flex: 2;
+  border-radius: 40rpx;
+  padding-right: 40rpx;
+  box-sizing: border-box;
+}
+
+.header .search-container .search-left image {
+  width: 48rpx;
+  height: 48rpx;
+  padding: 10rpx 10rpx;
+  vertical-align: middle;
+}
+
+.header .search-container .search-left input {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 88rpx);
+}
+
+.header .avatar {
+  margin: auto 15rpx;
+}
+
+.header .avatar image {
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+}
+
+.goTop {
+  position: fixed;
+  bottom: 80rpx;
+  right: 60rpx;
+  z-index: 9;
+}
+
+.qiandao {
+  position: fixed;
+  bottom: 180rpx;
+  right: 60rpx;
+  z-index: 9;
+}
+
+.endReached {
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #bdbdbd;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #8e44ad, #ff5252);
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.sentence {
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease-in forwards;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.share-btn {
+  background-color: #2ecc71;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

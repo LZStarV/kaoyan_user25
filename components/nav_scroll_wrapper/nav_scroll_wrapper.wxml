@@ -1,0 +1,6 @@
+<scroll-view class="scroll-wrapper scroll-wrapper-class" scroll-x scroll-with-animation="true" scroll-into-view="item{{currentTab < 4 ? 0 : currentTab - 3}}">
+  <view class="navigate-item navigate-item-class" id="item{{index}}" wx:for="{{navList}}" wx:key="index" data-index="{{index}}" data-id="{{item.id}}" bindtap="handleClick">
+    <view class="names {{currentTab === index ? 'active' : ''}}">{{item.name}}</view>
+    <view class="currtline {{currentTab === index ? 'active' : ''}}"></view>
+  </view>
+</scroll-view>

@@ -1,0 +1,76 @@
+@charset "UTF-8";
+.article-block {
+  display: flex;
+  height: 280rpx;
+  width: 90%;
+  margin: auto;
+  padding: 20rpx;
+  padding-bottom: 10rpx;
+  border: 1rpx solid rgba(209, 208, 208, 0.5);
+  margin-bottom: 30rpx;
+  border-radius: 20rpx;
+}
+
+.article-block .article {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.article-block .article .cover {
+  margin-top: 10rpx;
+  width: 280rpx;
+  height: 220rpx;
+  margin-left: 30rpx;
+}
+
+.article-block .article .article-title {
+  font-size: 30rpx;
+}
+
+.article-block .article .article-text {
+  font-size: 25rpx;
+  color: #616161;
+  padding-top: 10rpx;
+  padding-bottom: 30rpx;
+  height: 65rpx;
+  /* 根据实际需求调整高度 */
+  overflow: hidden;
+  /* 超出隐藏 */
+  text-overflow: ellipsis;
+  /* 超出部分显示省略号 */
+  display: -webkit-box;
+  /* 必须设置 */
+  -webkit-line-clamp: 3;
+  /* 控制显示的行数 */
+  -webkit-box-orient: vertical;
+  /* 必须设置 */
+  letter-spacing: 0.5rpx;
+  word-wrap: break-word;
+  /* 确保长单词或无法使用断点的文本能够正常换行 */
+}
+
+.article-block .article .article-other {
+  display: flex;
+  font-size: 22rpx;
+  align-items: center;
+  position: absolute;
+  width: 98%;
+  justify-content: space-between;
+  bottom: 0rpx;
+  left: 50%;
+  /* 设置左边距为50% */
+  transform: translateX(-50%);
+  /* 向左移动自身宽度的一半 */
+}
+
+.article-block .article .article-other .article-time {
+  color: darkgrey;
+}
+
+.article-block .article-image {
+  width: 230rpx;
+  height: 140rpx;
+}

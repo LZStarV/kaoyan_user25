@@ -1,0 +1,278 @@
+@charset "UTF-8";
+.small-header {
+  padding: 20rpx 20rpx 0rpx 20rpx;
+}
+
+.small-header .title {
+  font-size: large;
+  font-weight: bolder;
+  position: relative;
+  padding-left: 15rpx;
+}
+
+.small-header .title:before {
+  content: "";
+  background-color: #ff5d00;
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -8px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.small-header .tips {
+  color: #6d6c6c;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+
+.calendar {
+  display: flex;
+  height: 150rpx;
+  margin: 30rpx 20rpx;
+  background: #fff9f2;
+  border-radius: 20rpx;
+}
+
+.calendar .calendar-before {
+  width: 20%;
+  height: 150rpx;
+  background-image: linear-gradient(120deg, #ff5c16 0%, #ff9323 100%);
+  overflow: hidden;
+  /* 隐藏溢出部分 */
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+  border-radius: 10% 10% 30% 10% / 10% 10% 90% 10%;
+  /* 设置圆角大小 */
+  padding-right: 20rpx;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.calendar .calendar-before .year {
+  font-size: large;
+  font-weight: bolder;
+}
+
+.calendar .calendar-before .static-year {
+  font-size: smaller;
+}
+
+.calendar .calendar-scroll {
+  width: 80%;
+  white-space: nowrap;
+}
+
+.calendar .calendar-box {
+  display: inline-block;
+  position: relative;
+  z-index: 999;
+}
+
+.calendar .calendar-item {
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar .line-list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.calendar .line {
+  width: 80rpx;
+  height: 4rpx;
+  background: #ff7e1c;
+}
+
+.calendar .dot {
+  border-radius: 50%;
+  width: 10rpx;
+  height: 10rpx;
+  margin-left: 4rpx;
+  margin-right: 4rpx;
+  background: #ff7e1c;
+}
+
+.calendar .keyword {
+  font-size: 27rpx;
+  color: #ff7e1c;
+  margin-bottom: 8rpx;
+  font-weight: bolder;
+}
+
+.calendar .month {
+  font-size: 22rpx;
+  color: #ff7e1c;
+  padding-top: 2rpx;
+}
+
+.scroll-class {
+  margin-top: -180rpx;
+}
+
+.container {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  height: 400rpx;
+}
+
+.scroll-class {
+  height: 400rpx;
+}
+
+/* 单个图片容器的样式 */
+.img_item {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #ffffff;
+  font-size: 24rpx;
+  border: 2rpx solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.item_info {
+  border-top: 2rpx solid #eeeeee;
+}
+
+.goods-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10rpx 10rpx 0rpx 10rpx;
+}
+
+.goods-item {
+  width: 47%;
+  margin-left: 2%;
+  margin-top: 2%;
+  display: inline-block;
+  border: 2rpx solid #cccccc;
+  border-radius: 20rpx;
+  height: 400rpx;
+  padding-top: 10rpx;
+  background: #fffbf7;
+}
+
+.goods-item .item_cover {
+  text-align: center;
+  height: 220rpx;
+}
+
+.goods-item .item_cover image {
+  margin: 10rpx auto;
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid #cccccc;
+  background: #ffffff;
+}
+
+.goods-intro {
+  display: flex;
+  margin-top: 100rpx;
+  margin-left: 20rpx;
+  margin-right: 10rpx;
+  justify-content: space-between;
+}
+
+.goods-intro .name {
+  font-weight: bolder;
+  font-size: 28rpx;
+}
+
+.goods-intro .integral {
+  margin-top: 2rpx;
+  font-size: 24rpx;
+  color: #b82b2b;
+  font-weight: bolder;
+}
+
+.goods-intro .exchange {
+  height: 32rpx;
+  width: 80rpx;
+  line-height: 32rpx;
+  background-color: #ff811f;
+  text-align: center;
+  padding: 6rpx 8rpx;
+  border-radius: 30rpx;
+  color: #fff;
+  position: relative;
+  font-size: 24rpx;
+  font-weight: bolder;
+  letter-spacing: 4rpx;
+  top: 30rpx;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background: linear-gradient(135deg, #f78fb3, #ffcc70);
+  height: 100vh;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.countdown {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.countdown-title {
+  font-size: 16px;
+  color: #555;
+}
+
+.countdown-time {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sentence {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+}

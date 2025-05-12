@@ -1,0 +1,18 @@
+<view class="content">
+  <view class="title">{{examInfo.title}}</view>
+  <view class="detail">
+    <view class="downLoadNum">{{examInfo.downloadCount}}下载</view>
+    <view class="description">文字描述：{{examInfo.description}}</view>
+    <view>上传时间：{{examInfo.updateTime}}</view>
+    <view>文件大小：{{examInfo.size}}</view>
+    <view>来源：{{examInfo.from==='1'?'管理员提供':'用户提供'}}</view>
+    <view>格式：{{examInfo.form}}</view>
+  </view>
+</view>
+<!-- <view class="download" bindtap = "preView">
+  <text class="tip">预览</text>
+</view> -->
+<view class="download" bindtap = "downLoad">
+  <image src="../../../images/exam/download_white.png"></image>
+  <text class="tip">下载</text>
+</view>

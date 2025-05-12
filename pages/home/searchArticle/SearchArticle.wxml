@@ -1,0 +1,13 @@
+<view class="header">
+<view class="search-container" bindtap = "gotoSearch">
+  <view class="search-left">
+    <image src="../../../images/home/search.png" />
+    <input type="text" placeholder="搜索资讯" value="{{searchQuery}}" bindinput="onInputChange"/>
+  </view>
+</view>  
+<view class="search-button" bindtap="searchArticle">
+  搜索
+</view>
+</view>
+  <!--资讯-->
+  <article articleList="{{articleList}}"/>

@@ -1,0 +1,55 @@
+<!--引入骨架屏-->
+<import src="./skeleton/Home.skeleton"/>
+
+<!--使用骨架屏-->
+<template is="skeleton" wx:if="{{loading&&!ischeck}}"></template>
+<view wx:if="{{ischeck}}">
+    <view class="container">
+      <view class="title">考研倒计时</view>
+      <view class="sentence" wx:for="{{sentences}}" wx:key="*this">
+        {{item}}
+      </view>
+    </view>
+</view>
+<view wx:else>
+  <view class="header ">
+    <view class="days">
+      <view class="day">{{date.day}}</view>
+      <view class="year">
+          <view>Day</view>
+          <view>距考研</view>
+      </view>
+    </view>
+    <view class="search-container" bindtap = "gotoSearch">
+      <view class="search-left">
+        <image src="../../images/home/search.png" />
+        <input type="text" placeholder="搜索"/>
+      </view>
+    </view>  
+    <view class="avatar">
+      <image src="../../images/home/avatar.png" />
+    </view>
+  </view>
+  <view>
+  </view>
+  <!--轮播图-->
+  <banner bannerList="{{ bannerList }}" marginTop="95"/>
+  <!--功能入口-->
+  <entrance categoryList="{{ categoryList }}"/>
+  <!--分类-->
+  <navWrapper navList="{{navList}}"  bind:tabChange="handleTabChange"/>
+  <!--资讯-->
+  <view style="margin-top: 20rpx;">
+    <article articleList="{{articleList}}"/>
+  </view>
+  <!--签到-->
+  <view wx:if="{{sign}}"class="iconfont icon-yiqiandao qiandao" bindtap="gotoPoint" >
+  </view>
+  <view wx:else class="iconfont icon-weiqiandao qiandao" bindtap = "sign">
+  </view>
+   <!-- 返回顶部  -->
+   <view class='goTop' hidden='{{!scrollTop}}' bindtap="goTop">
+      <view class="iconfont icon-up"></view>
+   </view>
+  <view wx:if="{{isFinish}}" class="endReached">没有更多数据了</view>
+</view>

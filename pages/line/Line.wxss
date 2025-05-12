@@ -1,0 +1,284 @@
+@charset "UTF-8";
+/* 下拉筛选框 */
+.line-nav {
+  position: absolute;
+  /* 或 fixed */
+  top: 0;
+  /* 根据需要调整 */
+  width: 100%;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  z-index: 2;
+  background-image: linear-gradient(to bottom, #ffe2dd 0%, #fef2f0 100%);
+}
+
+.nav-son {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  height: 100rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: inline-block;
+  font-size: 28rpx;
+}
+
+.icon {
+  display: inline-block;
+  border: 10rpx solid transparent;
+  border-top: 10rpx solid;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+
+.temp {
+  position: relative;
+  z-index: 4;
+  background: #fff;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.fullbg {
+  position: fixed;
+  top: 0rpx;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: #010101;
+  transition: all 2s;
+  opacity: 0.5;
+}
+
+.nav-son.active .content {
+  color: #ff7a22;
+}
+
+.nav-son.active .icon {
+  border: 10rpx solid transparent;
+  border-top: 10rpx solid #ff7a22;
+}
+
+.slidown {
+  display: block;
+}
+
+.slidup {
+  display: none;
+}
+
+.degree_choice {
+  height: 160rpx;
+  line-height: 80rpx;
+}
+
+.degree_choice .select {
+  margin: auto;
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.degree_choice .selected {
+  color: #ff7a22;
+}
+
+.subject_choice {
+  width: 100%;
+  max-height: 450rpx;
+  overflow-y: scroll;
+  line-height: 100rpx;
+  background: #fff;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.subject_choice .select {
+  margin: auto;
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subject_choice .selected {
+  color: #ff7a22;
+}
+
+.subject_choice_sub {
+  display: flex;
+  background: #fff;
+  flex-direction: row;
+  widows: 100%;
+}
+
+.subject_choice_part_sub {
+  width: 60%;
+}
+
+.subject_choice_part {
+  width: 40%;
+}
+
+.common-style {
+  max-height: 450rpx;
+  overflow-y: scroll;
+  line-height: 100rpx;
+  text-align: left;
+  line-height: 80rpx;
+}
+
+.common-style .select {
+  margin: auto;
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.common-style .selected {
+  color: #ff7a22;
+}
+
+.content-score {
+  margin-top: 120rpx;
+  width: 100%;
+  text-align: center;
+  /* 使子元素水平居中对齐 */
+}
+
+.content-score .line-block {
+  margin: 20rpx auto;
+  width: 90%;
+  height: 240rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  position: relative;
+  padding: 10rpx 20rpx 0rpx 20rpx;
+}
+
+.content-score .line-block .line-title {
+  margin-top: 5rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.content-score .line-block .line-title .line-name {
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+
+.content-score .line-block .line-title .line-code {
+  color: #807e7e;
+  font-size: 24rpx;
+  margin-left: 15rpx;
+}
+
+.content-score .line-block .line-detail {
+  height: 160rpx;
+  background-color: #fafafa;
+  margin-top: 15rpx;
+  border-radius: 20rpx;
+  padding-top: 5rpx;
+}
+
+.content-score .line-block .row {
+  display: flex;
+  justify-content: space-around;
+  /* 确保每列之间的空间均等 */
+  padding-top: 12rpx;
+  /* 添加水平内边距 */
+}
+
+.content-score .line-block .title {
+  font-size: 25rpx;
+  color: #b5b5b5;
+}
+
+.content-score .line-block .question-img {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.content-score .line-block .row > view {
+  flex: 1;
+  /* 每一列均等分配空间 */
+  text-align: center;
+  /* 内容居中对齐 */
+}
+
+.content-score .line-block .row > .wide-column {
+  flex-grow: 2;
+  /* 增加列的扩展比例 */
+}
+
+.content-score .line-block .score {
+  font-size: 27rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+}
+
+page {
+  background-color: #fcf3f3;
+}
+
+.tip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* 确保宽度填满 */
+  height: 60vh;
+  z-index: 2;
+  /* Tip 的 z-index，应大于遮罩的 z-index */
+  background-color: #ffffff;
+  /* 或其他适当的背景颜色 */
+  padding: 60rpx 30rpx 0rpx 30rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.tip .title {
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.tip .sub_title {
+  margin-top: 30rpx;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+
+.tip .sub_title .highlight {
+  color: #ff7a22;
+}
+
+.tip .desc {
+  margin-top: 20rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+}
+
+.tip .know {
+  margin: 60rpx auto;
+  width: 96%;
+  border-radius: 15rpx;
+  height: 80rpx;
+  border: 2rpx solid #ff8330;
+  text-align: center;
+  color: #ff8330;
+  font-weight: bold;
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+
+.hidden {
+  height: 100vh;
+  overflow-y: hidden;
+}

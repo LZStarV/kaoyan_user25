@@ -1,0 +1,49 @@
+page {
+  background-color: #fffcf7;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 240rpx;
+  background-image: linear-gradient(to right, #c5edff 0%, #bce6fa 100%);
+}
+
+.title {
+  font-size: 45rpx;
+}
+
+.divider {
+  border: 0px;
+  border-bottom: 1px solid #ebedf0;
+  display: flex;
+  // margin: var(--divider-margin, 16px 0);
+}
+
+.scroll-wrapper-class {
+  background: #fffcf7 !important ;
+}
+
+.tab-class {
+  margin: 0rpx 70rpx !important;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-number {
+  font-size: 48rpx;
+}
+
+.detail-name {
+  font-size: 32rpx;
+}
+
+.detail-time {
+  font-size: 32rpx;
+}

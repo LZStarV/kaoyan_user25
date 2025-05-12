@@ -1,0 +1,114 @@
+/* pages/resource/resourceDetail/ResourceDetail.wxss */page
+{
+  background: #f6f6f6;
+}
+.content
+{
+  height:600rpx;
+  background: #ffffff;
+  margin: 30rpx auto;
+  width:90%;
+  border-radius: 20rpx;
+  padding: 35rpx 20rpx 20rpx 20rpx;
+  .title
+  {
+    font-weight: bolder;
+    font-size: larger;
+  }
+  .detail
+  {
+    color:#53524f;
+    line-height:80rpx;
+    font-size:28rpx;
+  }
+  .description
+  {
+    line-height: 36rpx;
+    padding-top:25rpx;
+    padding-bottom: 15rpx;
+  }
+}
+.download
+{
+  margin:50rpx auto;
+  width:94%;
+  height:90rpx;
+  background-color: #ff7214;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#ffffff;
+  image
+  {
+    width:60rpx;
+    height:60rpx;
+  }
+  .tip
+  {
+    margin-left:8rpx;
+  }
+}
+.middle
+{
+  padding-top:5rpx ;
+.resource-block
+{
+  margin:12rpx 10rpx;
+  height:200rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  border:1rpx solid #eeeeee;
+  position:relative;
+  .resource-title
+  {
+    font-size:30rpx;
+    font-weight: bolder;
+    padding: 20rpx 15rpx;
+  }
+  .tag
+  {
+    position: absolute;
+    bottom:15rpx;
+    padding:0rpx 15rpx;
+    justify-content: space-between;
+    align-items: center;
+    display:flex;
+    width:96%;//解决display因为position:absolute失效的问题
+    .category
+    {
+      display:flex;
+      align-items:center;
+      height:50rpx;
+      width:110rpx;
+      justify-content: space-evenly;
+      border-radius: 10rpx;
+    }
+    .category image
+    {
+      width:30rpx;
+      height:30rpx;
+    }
+    .categoryName
+    {
+      font-size:24rpx;
+    }
+    .download
+    {
+      display: flex;
+      align-items: center;
+      font-size: 25rpx;
+      color:#b5b5b5;
+      image
+      {
+        width:40rpx;
+        height:40rpx;
+      }
+    }
+    .downLoadNum
+    {
+      margin-left:12rpx;
+    }
+  }
+}
+}

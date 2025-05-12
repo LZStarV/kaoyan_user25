@@ -1,0 +1,44 @@
+.scroll-wrapper {
+  background: #FFF;
+  height: 90rpx;
+  padding: 0 18rpx;
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.navigate-item {
+  display: inline-block;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: 0 16rpx;
+}
+
+.names {
+  font-size: 28rpx;
+  color: #3c3c3c;
+}
+
+.names.active {
+  color: #fd7427;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.currtline {
+  margin: -8rpx auto 0 auto;
+  width: 100rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+}
+
+.currtline.active {
+  background: #fd7427;
+  transition: all .3s;
+}

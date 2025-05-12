@@ -1,0 +1,184 @@
+@charset "UTF-8";
+.header {
+  background-color: #fdefe9;
+  height: 300rpx;
+  overflow: hidden;
+}
+
+.header .user-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 100rpx;
+  width: 88%;
+}
+
+.header .user-container .setting {
+  color: #999;
+}
+
+.header .user-container .avatar-container {
+  display: flex;
+  align-items: center;
+}
+
+.header .user-container .avatar-container image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  background-color: #eee;
+}
+
+.header .user-container .avatar-container .no-login {
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+}
+
+.header .user-container .avatar-container .no-login text:first-child {
+  font-size: 28rpx;
+}
+
+.header .user-container .avatar-container .no-login .ellipsis {
+  width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.not_login {
+  margin: 120rpx auto;
+  width: 88%;
+  display: flex;
+  align-items: center;
+}
+
+.not_login .avatarUrl {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+.not_login .nickName {
+  color: #fff;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.cell-body {
+  position: relative;
+}
+
+.cell-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: -20rpx;
+}
+
+.cell {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  background-color: #fff;
+  padding: 30rpx 20rpx;
+  border-radius: 20rpx;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.cell-left {
+  display: flex;
+  align-items: center;
+}
+
+.cell-left .cell-left-image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.cell-left .cell-left-text {
+  margin-left: 20rpx;
+}
+
+.cell-right .cell-right-image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+/* 新添头像昵称编辑获取 */
+.avatar {
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  background: #eee;
+  border-radius: 50%;
+}
+
+.avatar image {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+}
+
+.weui-input {
+  width: 90%;
+  height: 60px;
+  margin: 20px auto;
+  background: #eee;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+
+.unlogin-btn {
+  background-color: #d1e4f8;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffecb3, #fff);
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.sentence {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.share-btn {
+  background-color: #ff9500;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

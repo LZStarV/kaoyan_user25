@@ -1,0 +1,26 @@
+<view class="header">
+  <view class="title">积分明细</view>
+  <view class="point-show">
+    <text>当前可用积分</text>
+    <text>{{pointCount}}</text>
+  </view>
+</view>
+
+<view class="divider" />
+
+<navWrapper navList="{{navList}}" scroll-wrapper-class="scroll-wrapper-class" navigate-item-class="tab-class" bind:tabChange="handleTabChange" />
+
+<view class="divider" />
+
+
+<view class="detail-list">
+  <view class="detail" wx:for="{{pointList}}" wx:key="index">
+    <view class="detail-information">
+      <view class="detail-name">{{item.itemName}}</view>
+      <view class="detail-time"> {{item.createTime}}</view>
+    </view>
+    <view class="detail-number">
+      {{item.type === 1 ? '+' : '-' }}{{item.count}}
+    </view>
+  </view>
+</view>

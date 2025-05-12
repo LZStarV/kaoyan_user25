@@ -1,0 +1,29 @@
+<view class="header">
+  <view class="search-container">
+    <view class="search-left">
+      <image src="../../../images/home/search.png" />
+      <input type="text" placeholder="搜索资源" value="{{searchQuery}}" bindinput="onInputChange"/>
+    </view>
+  </view>  
+  <view class="search-button" bindtap="searchResource">
+    搜索
+  </view>
+  </view>
+  <view class="middle">
+    <view class="resource-block" wx:for="{{ resourceList }}" wx:key="index" bindtap="gotoResourceDetail" data-id="{{ item.id }}">
+        <view class="resource-title">{{ item.title }}</view>
+        <view class="tag">
+          <view class="category">
+            <view class="categoryName">下载量：{{item.downloadCount}}</view>
+        </view>
+        <view class="download">
+          <image src="../../../images/exam/download.png"></image>
+          <text>下载</text>
+          <view class=" downLoadNum">{{item.downLoadCount}}</view>
+        </view>
+    </view>
+    </view>
+    </view>
+  <view wx:if="{{isFinish}}" class="tip">
+    暂无相关记录
+  </view>

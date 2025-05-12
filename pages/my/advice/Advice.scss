@@ -1,0 +1,73 @@
+page
+{
+  background-color: #f5f6fa;
+}
+.header
+{
+  height:150rpx;
+  background: linear-gradient(to right, #fff6f0, #f8fef9);
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 150rpx;
+  text-align: center;
+}
+.question
+{
+  width:90%;
+  margin:20rpx auto;
+  background-color: #ffffff;
+  padding:20rpx;
+  border-radius: 20rpx;
+  position: relative;
+  .upload_img
+  {
+    position: absolute;
+    bottom:20rpx;
+    height:200rpx;
+    width:200rpx;
+    background-color: #eeeeee;
+    text-align: center;
+    line-height: 180rpx;
+    font-size: 100rpx;
+    color:#9b9ca0;
+    z-index:999;
+    .show_image
+    {
+      width:200rpx;
+      height:200rpx;
+    }
+  }
+  .placeholder-style {
+    color: #9b9ca0;
+    font-size: 26rpx;
+  }
+  .custom-textarea {
+    width: 100%; /* 让 textarea 占满父容器的宽度 */
+    height: 700rpx;
+  }
+}
+.contact
+{
+  width:90%;
+  margin: auto;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15rpx;
+}
+.submit
+{
+  margin-left:4%;
+  background: linear-gradient(to right, #fc6b1c, #ff9e5b);
+  font-size: 25rpx;
+  color:#fff;
+  width:92%;
+  border-radius: 60rpx;
+  height:80rpx;
+  line-height:80rpx;
+  text-align: center;
+  position: absolute;
+  bottom:60rpx;
+  font-weight: bold;
+}

@@ -1,0 +1,59 @@
+<view wx:if="{{ischeck}}">
+  <view class="container">
+    <view class="header">
+      <text class="title">专注计时器</text>
+    </view>
+  
+    <view class="timer-section">
+      <text class="timer">{{time}}</text>
+      <view class="buttons">
+        <button bindtap="startTimer" class="start-button">开始</button>
+        <button bindtap="pauseTimer" class="pause-button">暂停</button>
+        <button bindtap="resetTimer" class="reset-button">重置</button>
+      </view>
+    </view>
+  
+    <view class="bottom-section">
+      <text class="quote">每日一句：{{quote}}</text>
+    </view>
+  </view>
+</view>
+<view wx:else>
+<view class="info">
+  <view class="title">{{info.title}}</view>
+  <view class="user">
+    <view class="group">
+      <view class="name">{{info.username}}</view>
+      <view class="time">{{info.updateTime}}</view>
+    </view>
+  </view>
+  <rich-text style="max-width: 100%; overflow: hidden;" nodes="{{info.content}}"></rich-text>
+</view>
+<view class="footer">
+  <view class="user">
+    <view class="avatar">
+    <image class="avatar_detail" src="{{info.avatar}}" mode=""/>
+    </view>
+   <view class="name">{{info.username}}</view>
+  </view>
+  <view class="container_wrap">
+    <view class="icon-container">
+      <view class="iconfont icon-liulan "></view>
+      <view class="info-text">{{info.readCount}}</view>
+    </view>
+    <!-- <view class="icon-container {{isLiked?'active':''}}" bindtap = "click_like" >
+      <view class="iconfont icon-dianzan "></view>
+      <view class="info-text">{{info.likeCount}}</view>
+    </view> -->
+    <view class="icon-container {{isStared?'active':''}}" bindtap = "click_star" >
+      <view class="iconfont icon-shoucang "></view>
+      <view class="info-text" >{{info.starCount}}</view>
+    </view>
+    <view class="icon-container">
+      <view class="iconfont icon-fenxiang"></view>
+      <button open-type="share" class="custom-share-button" size="mini">
+        分享</button>
+    </view>
+ </view>
+</view>
+</view>

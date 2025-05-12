@@ -1,0 +1,50 @@
+
+<view class="body" wx:if="{{!ischeck}}">
+  <view class="login" >
+    <view class="header">
+      <view wx:if="{{ !token||token&&!userInfo }}" class="user-container section" bindtap="toLoginPage">
+        <view class="avatar-container">
+          <image src="../../images/icon/avatar.png"></image>
+          <view class="no-login">
+            <text class="ellipsis">未登录</text>
+            <text>点击授权登录</text>
+          </view>
+        </view>
+      </view>
+      <!-- 登录以后得面板 -->
+      <view wx:else class="user-container section">
+        <view class="avatar-container">
+          <image src="{{ userInfo.avatar }}"></image>
+          <view class="no-login">
+            <text class="ellipsis">{{ userInfo.username }}</text>
+          </view>
+        </view>
+        <view class="setting">
+          <navigator url="/pages/profile/profile"> 修改资料 </navigator>
+        </view>
+      </view>
+    </view>
+      <view class="cell-body">
+          <view class="cell-list">
+              <view 
+                  class="cell" 
+                  wx:for="{{ cellList }}" 
+                  wx:key="index"
+                  data-page="{{ item.page }}"
+                  bindtap="toDetail"
+              >
+                  <view class="cell-left">
+                    <view class="iconfont icon-{{item.icon}}"></view>
+                    <text class="cell-left-text">{{ item.text }}</text>
+                  </view>
+              </view>
+          </view>
+      </view>
+  </view>
+</view>
+<view class="container" wx:else>
+  <view class="title">每日鼓励</view>
+  <view class="sentence" wx:for="{{sentences}}" wx:key="*this">
+    {{item}}
+  </view>
+</view>

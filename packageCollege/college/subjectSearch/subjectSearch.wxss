@@ -1,0 +1,93 @@
+/* pages/college/subjectDetailSearch/subjectDetailSearch.wxss */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0rpx;
+}
+
+.header .search-container {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-left: 15rpx;
+  border: 2rpx solid #fb752b;
+  border-radius: 20rpx;
+}
+
+.header .search-container .search-left {
+  background-color: white;
+  flex: 2;
+  border-radius: 40rpx;
+  padding-right: 40rpx;
+}
+
+.header .search-container .search-left image {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 10rpx 20rpx;
+  vertical-align: middle;
+}
+
+.header .search-container .search-left input {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 88rpx);
+}
+
+.header .search-button {
+  height: 60rpx;
+  width: 100rpx;
+  border-radius: 20rpx;
+  background-color: #fa742b;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  margin-left: 15rpx;
+}
+
+.detail_info {
+  width: 90%;
+  height: 120rpx;
+  margin: auto;
+  font-size: 30rpx;
+  overflow: scroll;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+
+.detail_info .top {
+  margin-top: 20rpx;
+}
+
+.detail_info .top .tag {
+  font-size: #fff7f5;
+  padding: 0rpx 10rpx;
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  position: relative;
+  bottom: 6rpx;
+}
+
+.detail_info .top .xue {
+  background: linear-gradient(to right, #ff866e, #ff6f5b);
+}
+
+.detail_info .top .zhuan {
+  background: linear-gradient(to right, #f79d62, #f4945a);
+}
+
+.detail_info .bottom {
+  margin-top: 10rpx;
+  color: #aaaaaa;
+  font-size: 24rpx;
+}
+
+.detail_info .bottom .department {
+  float: right;
+  font-size: 24rpx;
+  color: #d1d1d1;
+  position: relative;
+  top: 8rpx;
+}

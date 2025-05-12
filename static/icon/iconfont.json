@@ -1,0 +1,37 @@
+{
+  "id": "4635642",
+  "name": "kaoyan-user",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2127177",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "2681719",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "5835474",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "7408834",
+      "name": "题库",
+      "font_class": "tiku",
+      "unicode": "e6a0",
+      "unicode_decimal": 59040
+    }
+  ]
+}

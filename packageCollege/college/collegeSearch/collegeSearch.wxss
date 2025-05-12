@@ -1,0 +1,72 @@
+@charset "UTF-8";
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0rpx;
+}
+
+.header .search-container {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-left: 15rpx;
+  border: 2rpx solid #fb752b;
+  border-radius: 20rpx;
+}
+
+.header .search-container .search-left {
+  background-color: white;
+  flex: 2;
+  border-radius: 40rpx;
+  padding-right: 40rpx;
+}
+
+.header .search-container .search-left image {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 10rpx 20rpx;
+  vertical-align: middle;
+}
+
+.header .search-container .search-left input {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 88rpx);
+}
+
+.header .search-button {
+  height: 60rpx;
+  width: 100rpx;
+  border-radius: 20rpx;
+  background-color: #fa742b;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  margin-left: 15rpx;
+}
+
+.college {
+  display: flex;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  align-items: center;
+}
+
+.college .college_name {
+  overflow: hidden;
+  /* 隐藏溢出部分 */
+  white-space: nowrap;
+  /* 不换行 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+}
+
+.college .avatar {
+  vertical-align: middle;
+  height: 60rpx;
+  width: 60rpx;
+  margin: 0 20rpx;
+  border-radius: 50%;
+}

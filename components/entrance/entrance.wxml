@@ -1,0 +1,8 @@
+<view class="tab-box">
+  <view wx:for="{{categoryList}}" wx:key="index" wx:for-item="item" data-index="{{index}}" bindtap="gotoUtilsDetail">
+    <view class="tab-list">
+       <image style="height:80rpx;width:80rpx" src="{{item.imageUrl}}" mode=""/>
+        <view class="tab-text">{{item.name}}</view>
+    </view>
+</view>
+</view>

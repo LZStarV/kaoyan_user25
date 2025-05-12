@@ -1,0 +1,95 @@
+<view wx:if="{{ischeck}}">
+  <view class="container">
+    <view class="header">
+      <view class="title">考研加油</view>
+      <view class="subtitle">每天进步一点点，考研必胜！</view>
+    </view>
+  
+    <!-- 考研倒计时 -->
+    <view class="countdown">
+      <view class="countdown-title">距离考研还有</view>
+      <view class="countdown-time">{{days}}天</view>
+    </view>
+  
+    <!-- 励志句子 -->
+    <view class="section">
+      <view class="section-title">每日励志</view>
+      <view class="sentence" wx:for="{{sentences}}" wx:key="*this">
+        {{item}}
+      </view>
+    </view>
+  
+    <!-- 学长学姐经验分享 -->
+    <view class="section">
+      <view class="section-title">学长学姐经验分享</view>
+      <view class="experience" wx:for="{{experiences}}" wx:key="*this">
+        <view class="experience-title">{{item.title}}</view>
+        <view class="experience-content">{{item.content}}</view>
+      </view>
+    </view>
+
+  
+    <!-- 学习打卡 -->
+    <view class="section">
+      <view class="section-title">学习打卡</view>
+      <view class="card">
+        <view>今日学习时长：{{studyTime}}小时</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:else>
+  <view class="header">
+    <view class="small-header">
+      <text class="title">考研月历</text>
+      <text class="tips">左右滑动可以查看更多内容哦~</text>
+    </view>
+    <view class="calendar">
+        <view class="calendar-before">
+          <view class="year">{{year}}</view>
+          <view class="static-year">Year</view>
+        </view>
+        <scroll-view scroll-x="true" class="calendar-scroll" >
+          <view class="calendar-box" wx:for="{{calendarList}}" wx:key="id" bindtap="gotoDetail"
+          data-postId="{{item.postId}}">
+              <view class="calendar-item">
+                <view class='keyword'>{{item.keyword}}</view>
+                  <view class='line-list'>
+                      <view class='line' ></view>
+                      <view class="dot {{item.finished?'dotActive':''}}"></view>
+                      <view class='line' ></view>
+                   </view>
+                <view class='month'>{{item.month}}</view>
+              </view>
+         </view>
+        </scroll-view>
+    </view>
+    </view>
+    
+    <!--功能入口-->
+    <entrance categoryList="{{ categoryList }}"/>
+    
+    <view class="footer">
+      <view class="small-header">
+        <text class="title">积分商城</text>
+      </view>
+    </view>
+    <!--导航栏-->
+    <navWrapper navList="{{navList}}" bind:tabChange="handleTabChange"/>
+    <view class="goods-list">
+      <view wx:for="{{itemList}}" wx:for-item="item" wx:for-index="index" wx:key="*this" class="goods-item">
+        <view class="item_cover">
+          <image src="{{item.cover}}"  />
+        </view>
+        <view class="goods-intro">
+          <view>
+          <view class="name">{{item.name}}</view>
+          <view class="integral">{{item.point}}积分</view>
+        </view>
+          <view class="exchange" data-item="{{item}}" bindtap = "exchange">
+            <text>兑换</text>
+          </view>
+        </view>
+      </view>
+    </view>    
+</view>

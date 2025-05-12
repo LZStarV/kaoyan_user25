@@ -1,0 +1,147 @@
+<!--
+此文件为开发者工具生成，生成时间: 2024/8/27下午1:19:21
+使用方法：
+在 F:\kaoyan\kaoyan_user\pages\home\Home.wxml 引入模板
+
+```
+<import src="Home.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 F:\kaoyan\kaoyan_user\pages\home\Home.wxss 中引入样式
+```
+@import "./Home.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="header sk-image">
+      <view class="days">
+        <view class="day sk-transparent">
+          <text class="day_special sk-transparent sk-text-14-2857-91 sk-text">278</text>天</view>
+        <view class="year sk-transparent sk-text-14-2857-366 sk-text">距2025考研</view>
+      </view>
+      <view class="search-container">
+        <view class="search-left">
+          <image class="sk-image"></image>
+          <view placeholder="搜索" type="text" class="sk-image"></view>
+        </view>
+        <view class="search-right">
+          <image class="sk-image"></image>
+        </view>
+      </view>
+    </view>
+    <view></view>
+    <view is="pages/home/banner/banner">
+      <view class="banner--swiper-box">
+        <swiper autoplay="false" class="banner--swiper" duration="1000" indicator-active-color="#FF734C" indicator-color="rgba(0, 0, 0, .3)" interval="2000" style="margin-top: 80px;" current="0">
+          <swiper-item class="banner--swiper-item" style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+            <navigator class="banner--navigator" hover-class="none">
+              <image class="banner--img sk-image"></image>
+            </navigator>
+          </swiper-item>
+        </swiper>
+        <view class="banner--indicator">
+          <text class="banner--rectangle"></text>
+          <text class="banner--rectangle"></text>
+          <text class="banner--active banner--rectangle"></text>
+        </view>
+      </view>
+    </view>
+    <view is="pages/home/entrance/entrance">
+      <view class="entrance--tab-box">
+        <view data-nav="line">
+          <view class="entrance--tab-list">
+            <image class="entrance--tab-img sk-image"></image>
+            <view class="entrance--tab-text sk-transparent sk-text-14-2857-197 sk-text" style="background-position-x: 50%;">国家线</view>
+          </view>
+        </view>
+        <view data-nav="college">
+          <view class="entrance--tab-list">
+            <image class="entrance--tab-img sk-image"></image>
+            <view class="entrance--tab-text sk-transparent sk-text-14-2857-679 sk-text" style="background-position-x: 50%;">院校查询</view>
+          </view>
+        </view>
+        <view data-nav="exam">
+          <view class="entrance--tab-list">
+            <image class="entrance--tab-img sk-image"></image>
+            <view class="entrance--tab-text sk-transparent sk-text-14-2857-639 sk-text" style="background-position-x: 50%;">历年真题</view>
+          </view>
+        </view>
+        <view data-nav="resource">
+          <view class="entrance--tab-list">
+            <image class="entrance--tab-img sk-image"></image>
+            <view class="entrance--tab-text sk-transparent sk-text-14-2857-511 sk-text" style="background-position-x: 50%;">资源库</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view is="components/nav_scroll_wrapper/nav_scroll_wrapper">
+      <scroll-view scroll-x="true" class="wrapper--scroll-wrapper" scroll-into-view="item0" scroll-with-animation="true">
+        <view class="wrapper--navigate-item" data-index="0" id="738f7784--item0">
+          <view class="wrapper--names wrapper--active sk-transparent sk-text-31-3725-400 sk-text" style="background-position-x: 50%;">全部</view>
+          <view class="wrapper--currtline wrapper--active"></view>
+        </view>
+        <view class="wrapper--navigate-item" data-index="1" id="738f7784--item1">
+          <view class="wrapper--names sk-transparent sk-text-34-3137-540 sk-text" style="background-position-x: 50%;">招生解读</view>
+          <view class="wrapper--currtline"></view>
+        </view>
+        <view class="wrapper--navigate-item" data-index="2" id="738f7784--item2">
+          <view class="wrapper--names sk-transparent sk-text-34-3137-222 sk-text" style="background-position-x: 50%;">学长学姐有话说</view>
+          <view class="wrapper--currtline"></view>
+        </view>
+        <view class="wrapper--navigate-item" data-index="3" id="738f7784--item3">
+          <view class="wrapper--names sk-transparent sk-text-34-3137-271 sk-text" style="background-position-x: 50%;">考研科普</view>
+          <view class="wrapper--currtline"></view>
+        </view>
+        <view class="wrapper--navigate-item" data-index="4" id="738f7784--item4">
+          <view class="wrapper--names sk-transparent sk-text-34-3137-977 sk-text" style="background-position-x: 50%;">资料库</view>
+          <view class="wrapper--currtline"></view>
+        </view>
+      </scroll-view>
+    </view>
+    <view is="pages/home/article/article">
+      <view class="article--article-block" data-id="1">
+        <view class="article--article">
+          <view class="article--article-title sk-transparent sk-text-14-2857-858 sk-text">快讯！2024年研考国家线发布</view>
+          <view class="article--article-time"></view>
+        </view>
+      </view>
+      <view class="article--article-block" data-id="2">
+        <view class="article--article">
+          <view class="article--article-title sk-transparent sk-text-14-2857-587 sk-text">2024高考报名入口</view>
+          <view class="article--article-time"></view>
+        </view>
+      </view>
+      <view class="article--article-block" data-id="2">
+        <view class="article--article">
+          <view class="article--article-title sk-transparent sk-text-14-2857-526 sk-text">2024高考报名入口</view>
+          <view class="article--article-time"></view>
+        </view>
+      </view>
+      <view class="article--article-block" data-id="2">
+        <view class="article--article">
+          <view class="article--article-title sk-transparent sk-text-14-2857-753 sk-text">2024高考报名入口</view>
+          <view class="article--article-time"></view>
+        </view>
+      </view>
+      <view class="article--article-block" data-id="3">
+        <view class="article--article">
+          <view class="article--article-title sk-transparent sk-text-14-2857-939 sk-text">2024年春节放假安排</view>
+          <view class="article--article-time"></view>
+        </view>
+      </view>
+      <view class="article--article-block" data-id="4">
+        <view class="article--article">
+          <view class="article--article-title sk-transparent sk-text-14-2857-23 sk-text">2024年寒假作业安排</view>
+          <view class="article--article-time"></view>
+        </view>
+      </view>
+    </view>
+    <view class="goTop">
+      <image class="tab-img sk-image" mode="widthFix" style="height: 45px;"></image>
+    </view>
+  </view>
+</template>

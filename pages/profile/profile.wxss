@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* pages/profile/profile.wxss */
+.avatar image {
+  width: 90rpx;
+  height: 90rpx;
+  position: relative;
+  top: 10rpx;
+  left: 110rpx;
+  border-radius: 50%;
+}
+
+.setting-list {
+  padding: 0 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: relative;
+  padding-right: 50rpx;
+}
+
+.setting-list::after {
+  content: '\e612';
+  font-family: 'iconfont';
+  position: absolute;
+  top: 48%;
+  right: 0px;
+  font-size: 24rpx;
+  transform: translateY(-50%);
+  color: #999;
+  padding-right: 12rpx;
+}
+
+.setting-list text:first-child {
+  color: #333;
+  font-size: 30rpx;
+}
+
+.avatar-container {
+  height: 120rpx;
+  line-height: 120rpx;
+}
+
+.nickname {
+  padding-right: 60rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+button {
+  background-color: #fff;
+}
+
+button:after {
+  border: none;
+}
+
+button[type='primary'] {
+  background-color: #fff !important;
+  color: #fd7428;
+  font-size: 34rpx;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.footer .btn {
+  width: 76%;
+  line-height: 80rpx;
+  font-weight: bold;
+  font-size: 28rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  background-color: #fd7428;
+  color: #ffffff;
+}
+
+/* 更新用户昵称 */
+.van-field__control {
+  border: 1px solid #efefef !important;
+  min-height: 60rpx !important;
+  line-height: 60rpx !important;
+  margin: 16rpx !important;
+  padding-left: 20rpx !important;
+  border-radius: 16rpx;
+}
+
+.dialog-content {
+  display: flex;
+}
+
+.dialog-content .cancel {
+  color: #333;
+  font-size: 34rpx;
+}
+
+.input-name {
+  border: 1px solid #ccc;
+  margin: 40rpx 40rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 16rpx;
+  padding: 6rpx 12rpx;
+  padding-left: 20rpx;
+}

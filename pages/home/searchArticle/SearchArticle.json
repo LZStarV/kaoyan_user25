@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "article": "../article/article"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#f7f4f8",
+  "backgroundTextStyle": "dark"
+}

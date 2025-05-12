@@ -1,0 +1,23 @@
+<view class="header">
+  <view class="search-container">
+    <view class="search-left">
+      <image src="../../../images/home/search.png" />
+      <input type="text" placeholder="搜索专业" value="{{searchQuery}}" bindinput="onInputChange"/>
+    </view>
+  </view>  
+  <view class="search-button" bindtap="searchSubject">
+    搜索
+  </view>
+  </view>
+
+  <view  class="detail_info"  wx:for="{{subjectInfoList}}" wx:key="index" wx:for-index="index" wx:for-item="item" data-index="{{index}}" >
+    <view class="top">
+      <span>({{item.code}})</span>
+      <span>{{item.name}}</span>
+      <span class="tag {{item.masterType===1?'xue':'zhuan'}}">{{item.masterType===1?"学硕":"专硕"}}</span>
+    </view>
+    <view class="bottom">
+      <span>{{item.fieldName}}-{{item.disciplineName}}</span>
+      <span class="department">{{item.collegue}}</span>
+    </view>
+  </view>

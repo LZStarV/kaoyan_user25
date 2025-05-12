@@ -1,0 +1,287 @@
+@charset "UTF-8";
+page {
+  overflow: hidden;
+}
+
+.header {
+  height: 160rpx;
+  background-image: linear-gradient(to bottom right, #fdeade 0%, #eff8ed 100%);
+  padding: 30rpx 20rpx 15rpx 20rpx;
+}
+
+.search {
+  background-color: white;
+  border-radius: 40rpx;
+  padding-right: 40rpx;
+}
+
+.search image {
+  width: 48rpx;
+  height: 48rpx;
+  padding: 10rpx 20rpx;
+  vertical-align: middle;
+}
+
+.search input {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 88rpx);
+}
+
+.scroll-wrapper {
+  white-space: nowrap;
+  height: 90rpx;
+  box-sizing: border-box;
+  width: 80%;
+}
+
+.navigate-item {
+  display: inline-block;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 10rpx;
+}
+
+.names {
+  font-size: 28rpx;
+  color: #3c3c3c;
+}
+
+.names.active {
+  color: #fd5a48;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.currtline {
+  margin: -8rpx auto 0 auto;
+  width: 100rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+}
+
+.currtline.active {
+  background: #ff3f29;
+  transition: all .3s;
+}
+
+.college-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.select {
+  position: relative;
+  top: 4rpx;
+  display: flex;
+  align-items: center;
+}
+
+.vertical-line {
+  width: 1px;
+  /* 或者更宽的线条，例如 2px */
+  height: 50rpx;
+  /* 竖线的高度 */
+  background-color: #848b8f;
+  /* 竖线的颜色 */
+}
+
+.content {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #1b1b1a;
+  margin-left: 20rpx;
+}
+
+.icon-up {
+  display: inline-block;
+  border: 10rpx solid transparent;
+  border-top: 10rpx solid #666;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.icon-down {
+  display: inline-block;
+  border: 10rpx solid transparent;
+  border-bottom: 10rpx solid #666;
+  margin-left: 10rpx;
+}
+
+.middle {
+  width: 100%;
+  background-color: #f6f7fb;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  /* 视口高度 */
+}
+
+.left {
+  width: 25%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  overflow: scroll;
+}
+
+.left .province {
+  position: relative;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+}
+
+.left .province .active {
+  background-color: #f6f7fb;
+  height: 100rpx;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.left .active::before {
+  content: " ";
+  position: absolute;
+  left: 0rpx;
+  width: 6rpx;
+  height: 80%;
+  top: 10%;
+  background-color: #f86227;
+}
+
+.right {
+  width: 70%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.right .college {
+  display: flex;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  align-items: center;
+}
+
+.right .college .college_name {
+  overflow: hidden;
+  /* 隐藏溢出部分 */
+  white-space: nowrap;
+  /* 不换行 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+}
+
+.right .college .avatar {
+  vertical-align: middle;
+  height: 60rpx;
+  width: 60rpx;
+  margin: 0 20rpx;
+  border-radius: 50%;
+}
+
+.select_pop {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* 确保宽度填满 */
+  height: 70vh;
+  z-index: 2;
+  /* Tip 的 z-index，应大于遮罩的 z-index */
+  background-color: #ffffff;
+  /* 或其他适当的背景颜色 */
+  padding: 20rpx 30rpx 0rpx 30rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  overflow: hidden;
+}
+
+.select_pop .title {
+  margin-top: 60rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.select_pop .close {
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+}
+
+.select_pop .grid-container1 {
+  margin-top: 30rpx;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20rpx;
+}
+
+.select_pop .grid-container2 {
+  width: 90%;
+  margin-top: 30rpx;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20rpx;
+}
+
+.select_pop .grid-item {
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1rpx solid #cacaca;
+  border-radius: 8rpx;
+}
+
+.select_pop .active {
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1rpx solid #fd6919;
+  border-radius: 8rpx;
+  color: #fd6919;
+  background: #ffeee6;
+}
+
+.select_pop .button {
+  display: flex;
+  margin-top: 180rpx;
+  justify-content: space-between;
+}
+
+.select_pop .button .reset {
+  width: 40%;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 3rpx solid #fd6514;
+  border-radius: 40rpx;
+  color: #fd6514;
+  font-weight: bold;
+  text-align: center;
+}
+
+.select_pop .button .confirm {
+  width: 55%;
+  height: 70rpx;
+  line-height: 70rpx;
+  background: linear-gradient(to right, #fd6818, #ff9a55);
+  border-radius: 40rpx;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.fullbg {
+  position: fixed;
+  top: 0rpx;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: #010101;
+  transition: all 2s;
+  opacity: 0.5;
+}

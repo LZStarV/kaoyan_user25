@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* pages/index/entrance/entrance.wxss */
+/* 导航分类样式 */
+.tab-box {
+  margin-top: 35rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tab-list {
+  text-align: center;
+}
+
+.tab-img {
+  width: 70%;
+  height: 70rpx;
+}
+
+.tab-text {
+  font-size: 26rpx;
+  margin-top: 8rpx;
+}

@@ -1,0 +1,21 @@
+<view class="header">
+  <view class="search" bindtap="gotoResourceSearch">
+    <image src="../../images/home/search.png" />
+    <input type="text" placeholder="搜索"/>
+  </view>
+</view>
+<view class="middle">
+<view class="resource-block" wx:for="{{ resourceList }}" wx:key="index" bindtap="gotoExamDetail" data-id="{{ item.id }}">
+    <view class="resource-title">{{ item.title }}</view>
+    <view class="tag">
+      <view class="category">
+        <view class="categoryName">下载量：{{item.downloadCount}}</view>
+    </view>
+    <view class="download">
+      <image src="https://ezcatcat-javaweb-test.oss-cn-guangzhou.aliyuncs.com/43aec88b-92bc-4665-9b62-55c7032038e9.png"></image>
+      <text>下载</text>
+      <view class=" downLoadNum">{{item.downLoadCount}}</view>
+    </view>
+</view>
+</view>
+</view>

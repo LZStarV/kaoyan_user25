@@ -1,0 +1,161 @@
+<!--顶部-->
+<view class="header">
+  <view class="contanier">
+    <image class="avatar" src="../../../../images/college/PKU.jpg" mode=""/>
+    <view class="desc">
+      <view class="name">北京大学
+        <image wx:if="{{!starJudge}}"class="star" src="../../../../images/icon/star.png" bindtap="click_star">
+        </image>
+        <image wx:else class="star" src="../../../../images/icon/star_red.png" 
+        bindtap="click_star">
+        </image>
+      </view>
+      <view class="title"  wx:for="{{title}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+        {{item}}
+      </view>
+      <view class="subject_title">
+        <span class="code">(010101)</span>
+        <span class="subject_name">马克思主义哲学</span>
+        <span class="tag">学硕</span>
+      </view>
+      <view class="subject_rank">
+        <span>学科评级</span>
+        <span class="rank">A+</span>
+        <span class="category">学科门类</span>
+        <span>哲学</span>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--导航栏-->
+<view class="scroll-wrapper" >
+  <view class="navigate-item" id="{{index}}" wx:for="{{infoType}}" wx:key="index" data-index="{{index}}" bindtap="click_infoType">
+    <view class="names {{current_infoType === index ? 'active' : ''}}">{{item}}</view>
+    <view class="currtline {{current_infoType === index ? 'active' : ''}}"></view>
+  </view>
+</view>
+
+<view wx:if="{{current_infoType===0}}">
+  <view class="content">
+  <view class="block_container">
+  <view class="college_block blue">
+    <view class="college_header">院校类型</view>
+    <view class="college_category">综合</view>
+  </view>
+  <view class="college_block orange">
+    <view class="college_header">院校类型</view>
+    <view class="college_category">综合</view>
+  </view>
+  </view>
+  <view class="content_container">
+    <view class="content_header">
+      <span class="intro">院校简介</span>
+      <div class="other_intro">
+        <span class="code">院校代码：10001</span>
+        <span class="site">北京-北京</span>
+      </div>
+    </view>
+    <rich-text class="info" nodes="{{info}}"></rich-text>
+  </view>
+</view>
+</view>
+
+<view wx:if="{{current_infoType===1}}">
+  <view class="content">
+    <view class="subject_intro">
+      <view class="header_title">专业介绍</view>
+      <rich-text class="info {{isExpanded?'':'hide'}}" nodes="{{subject_intro_info}}"></rich-text>
+      <view class="expand" bindtap="click_expand">
+      <span wx:if="{{!isExpanded}}">展开</span>
+      <image  wx:if="{{!isExpanded}}" class="indicate" src="../../../../images/icon/down.png" mode=""/>
+      <span wx:if="{{isExpanded}}">收起</span>
+      <image  wx:if="{{isExpanded}}" class="indicate" src="../../../../images/icon/up.png" mode=""/>
+    </view>
+    </view>
+    <view class="work_direction">
+      <view class="header_title">就业方向</view>
+      <view class="workers">
+      <view class="worker"  wx:for="{{workList}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+        {{item}}
+      </view>
+    </view>
+    </view>
+    <view class="work_future"></view>
+      <view class="header_title">就业前景</view>
+      <rich-text class="info" nodes="{{work_future_info}}"></rich-text>
+  </view>
+</view>
+
+<view wx:if="{{current_infoType==2}}">
+  <view class="line">
+    <view class="header_title">国家线（哲学-马克思主义哲学）</view>
+    <view class="table">
+      <view class="row row_header">
+        <view class="cell"></view>
+        <view class="cell cell-a1">A区</view>
+        <view class="cell cell-b1">B区</view>
+      </view>
+      <view class="row row_header row_second_header">
+        <view class="cell ">年份</view>
+        <view class="cell ">总分</view>
+        <span class="cell special">单科(满分=100)</span>
+        <view class="cell special">单科(满分>100)</view>
+        <view class="cell ">总分</view>
+        <view class="cell special">单科(满分=100)</view>
+        <view class="cell special">单科(满分>100)</view>
+      </view>
+      <view wx:for="{{scores}}" wx:key="index">
+        <view class="row">
+          <view class="cell" wx:for="{{item}}" wx:key="index">
+            {{item}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{current_infoType==3}}">
+<view class="search_direction">
+  <view class="card">
+    <view class="card_header">
+      <span class="card_title">马克思主义哲学史</span>
+      <span class="card_tag">全日制</span>
+    </view>
+    <view class="card_inner">
+      <view class="card_inner_header">
+        <view class="left">
+          <view class="title_text">招生人数</view>
+          <view class="number">2</view>
+        </view>
+        <view class="right">
+          <view class="title_text">考试范围</view>
+          <view class="grid-container">
+              <view class="item">(201)英语（一）</view>
+              <view class="item">(101)思想政治理论</view>
+              <view class="item">(645)西方哲学史一</view>
+              <view class="item">(865)马克思主义哲学</view>
+          </view>
+        </view>
+      </view>
+      <view class="card_inner_bottom">
+        <span class="tip {{isTipExpanded?'':'tip_hide'}}">
+    备注：考试科目3西方哲学史一包括现代部分，考试科目马克思
+    主义哲学包括历史和原理部分。拟招生人数可能会根据国家下达
+    计划，实际接收推免生人数及生源情况进行调整。</span>
+  <image bindtap="click_tip_expand" wx:if="{{!isTipExpanded}}" class="indicate_down" src="../../../../images/icon/down.png" mode=""/>
+  <image  bindtap="click_tip_expand" wx:if="{{isTipExpanded}}" class="indicate_up" src="../../../../images/icon/up.png" mode=""/>
+      </view>
+    </view>
+  </view>
+</view>
+</view>
+
+<view wx:if="{{showSuccess&&clickshow}}" class="star_pop sussess">
+  <span>收藏成功，请到个人中心查看</span>
+</view>
+
+<view wx:if="{{!showSuccess&&clickshow}}" class="star_pop cancel">
+  <span>已取消收藏</span>
+</view>

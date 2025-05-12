@@ -1,0 +1,26 @@
+
+ <!--分类-->
+ <navWrapper navList="{{navList}}"  bind:tabChange="handleTabChange"/>
+ <!--订单列表-->
+ <view class="orders-block" wx:for="{{ ordersList }}" wx:key="index"  data-id="{{ index }}">
+  <view class="order">
+    <view class="header">
+      <view class="name">{{item.name}}</view>
+      <view class="status">{{item.status===0?'未兑换':'已兑换'}}</view>
+    </view>
+    <view class="middle">
+      <image src="{{item.cover}}" mode=""/>
+      <view class="info">
+        <view class="numberInfo">订单号:</view>
+        <view>{{item.orderNum}}</view>
+        <view class="get" bindtap="getThing">点我获取</view>
+      </view>
+    </view>
+  </view>
+</view>
+  <!-- 遮罩 -->
+<view class="{{isfull ?'fullbg':''}}" bindtap="hidebg"></view>
+<view wx:if="{{isfull}}" class="code" bindtap="hidebg">
+  <image src="/images/my/code.png" mode="aspectFit"></image>
+  <view class="tiptext">请联系我获取~</view>
+</view>

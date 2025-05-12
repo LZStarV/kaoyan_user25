@@ -1,0 +1,108 @@
+<!-- 下拉筛选框 -->
+<view class="{{isfull?'hidden':''}}">
+<view class="line-nav">
+  <view class="nav" >
+    <view class="nav-son {{shownavindex == 1? 'active' : ''}}" bindtap="click_time" data-nav="1">
+      <view class="content">{{year_lists[selectedTimeIndex]}}</view>
+      <view class="icon"></view>
+    </view>
+    <view class="nav-son {{shownavindex == 2? 'active' : ''}}" bindtap="click_degree" data-nav="2">
+      <view class="content">{{type_of_master_degrees[selectedDegreeIndex]}}</view>
+      <view class="icon"></view>
+    </view>
+    <view class="nav-son {{shownavindex == 3? 'active' : ''}}"  bindtap="click_subject" data-nav="3">
+      <view class="content" wx:if="{{!sub_or_not}}">{{selectedSubjectIndex ===0 ? '专业类别' : type_of_subjects[selectedSubjectIndex].name}}</view>
+      <view class="content" wx:else>{{selectedSubjectSubIndex === 0 ? type_of_subjects[selectedSubjectIndex].name : type_of_subjects_sub[selectedSubjectSubIndex].name}}</view>
+      <view class="icon"></view>
+    </view>
+  </view>
+  <!-- 时间 -->
+  <view class="temp subject_choice {{time_open ? 'slidown' : 'slidup'}}">
+       <view wx:for="{{year_lists}}" wx:key="index" wx:key="index" bindtap="selectTime" data-index="{{index}}" class="select {{index === selectedTimeIndex ? 'selected' : ''}}">
+          <text>{{item}}</text>
+          <text wx:if="{{index === selectedTimeIndex}}">√</text>
+      </view>
+  </view>
+  <!--硕士类型 -->
+  <view class="temp degree_choice {{degree_open ? 'slidown' : 'slidup'}} ">
+       <view wx:for="{{type_of_master_degrees}}" wx:key="index" wx:key="index" bindtap="selectDegree" data-index="{{index}}" class="select {{index === selectedDegreeIndex ? 'selected' : ''}}">
+          <text>{{item}}</text>
+          <text wx:if="{{index === selectedDegreeIndex}}">√</text>
+      </view>
+  </view>
+ <!--专业类别 -->
+  <view class="temp  subject_choice {{subject_open ? 'slidown' : 'slidup'}}">
+    <view wx:if="{{!sub_or_not}}">
+      <view wx:for="{{type_of_subjects}}" wx:key="index" bindtap='selectSubjectIndex' data-index="{{index}}" class="select {{selectedSubjectIndex == index?'selected':''}}">
+        <text>{{item.name}}</text>
+        <text wx:if="{{index === selectedSubjectIndex}}">√</text>
+      </view>
+  </view>
+  <view wx:else>
+    <view class="subject_choice_sub ">
+    <view class="subject_choice_part common-style">
+    <view wx:for="{{type_of_subjects}}"wx:key="index" bindtap='selectSubjectIndex' data-index="{{index}}" class="select {{selectedSubjectIndex == index?'selected':''}}">
+       <text>{{item.name}}</text>
+       <text wx:if="{{index === selectedSubjectIndex}}">√</text>
+    </view>
+    </view>
+    <view class="subject_choice_part_sub common-style">
+    <view wx:for="{{type_of_subjects_sub}}" wx:key="index" bindtap='selectSubjectSubIndex' data-index="{{index}}" class="select {{selectedSubjectSubIndex == index?'selected':''}}">
+       <text>{{item.name}}</text>
+       <text wx:if="{{index === selectedSubjectSubIndex}}">√</text>
+    </view>
+    </view>
+    </view>
+</view>
+</view>
+  <!-- 遮罩 -->
+<view class="{{isfull ?'fullbg':''}}" bindtap="hidebg"></view>
+</view>
+
+<view class="content-score ">
+  <view class="line-block" wx:for="{{ records }}" wx:key="index" data-id="{{ item.id }}">
+    <view class="line-title">
+      <view class="line-name">{{item.name}}</view>
+      <view class="line-code">{{item.code}}</view>
+    </view>
+    <view class="line-detail">
+      <view class="row title">
+        <view >类别
+          <image class="question-img" src="../../images/line/question.png" bindtap='click_tip'></image>
+        </view>
+        <view>总分</view>
+        <view class=".wide-column">单科（满分=100）</view>
+        <view class=".wide-column ">单科（满分>100)</view>
+      </view>
+      <view class="row score">
+        <view>A类</view>
+        <view>{{item.ascore}}</view>
+        <view class=".wide-column ">{{item.aeq}}</view>
+        <view class=".wide-column ">{{item.agt}}</view>
+      </view>
+      <view class="row score">
+        <view>B类</view>
+        <view>{{item.bscore}}</view>
+        <view class=".wide-column ">{{item.beq}}</view>
+        <view class=".wide-column ">{{item.bgt}}</view>
+      </view>
+    </view>
+</view>
+</view>
+
+<view wx:if="{{showtip}}" class="tip">
+  <view class="title">考生类别说明</view>
+  <view class="sub_title">
+    <span class="highlight">A类</span>
+    <span>考生</span>
+  </view>
+  <view class="desc">报考地处一区招生单位的考生一区系北京，天津，河北，山西，辽宁，吉林，黑龙江，上海，江苏，浙江，安徽，福建，江西，山东，河南，湖北，湖南，广东，重庆，四川，陕西等21省（市）.</view>
+  <view class="sub_title">
+    <span class="highlight">B类</span>
+    <span>考生</span>
+  </view>
+  <view class="desc">报考地处二区招生单位的考生二区系内蒙古，广西，海南，
+    贵州，云南 贵州，云南，西菜，甘肃，青海，宁豆，新疆等10省（区）.</view>
+  <view class="know" bindtap="click_know">我知道了</view>
+</view>
+</view>

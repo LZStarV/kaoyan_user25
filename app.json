@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/home/Home",
+    "pages/utils/Utils",
+    "pages/my/My",
+    "pages/home/articleDetail/ArticleDetail",
+    "pages/exam/Exam",
+    "pages/exam/examDetail/ExamDetail",
+    "pages/line/Line",
+    "pages/my/advice/Advice",
+    "pages/my/point/Point",
+    "pages/my/star/Star",
+    "pages/login/Login",
+    "pages/profile/profile",
+    "pages/home/searchArticle/SearchArticle",
+    "pages/my/myInfo/myInfo",
+    "pages/exam/examSearch/examSearch",
+    "pages/my/myList/myList",
+    "pages/my/pointDetail/pointDetail"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "奇点Record",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#fd6413",
+    "list": [
+      {
+        "pagePath": "pages/home/Home",
+        "text": "首页",
+        "iconPath": "static/tabBar/home.png",
+        "selectedIconPath": "static/tabBar/home_after.png"
+      },
+      {
+        "pagePath": "pages/utils/Utils",
+        "text": "工具",
+        "iconPath": "static/tabBar/message.png",
+        "selectedIconPath": "static/tabBar/message_after.png"
+      },
+      {
+        "pagePath": "pages/my/My",
+        "text": "我的",
+        "iconPath": "static/tabBar/my.png",
+        "selectedIconPath": "static/tabBar/my_after.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "entrance": "./components/entrance/entrance",
+    "navWrapper": "./components/nav_scroll_wrapper/nav_scroll_wrapper"
+  },
+  "subPackages": [
+    {
+      "root": "packageCollege",
+      "pages": [
+        "college/College",
+        "college/collegeDetail/CollegeDetail",
+        "college/subjectDetail/SubjectDetail",
+        "college/collegeSearch/collegeSearch",
+        "college/subjectSearch/subjectSearch"
+      ]
+    },
+    {
+      "root": "packageResource",
+      "pages": [
+        "resource/Resource",
+        "resource/resourceDetail/ResourceDetail",
+        "resource/resourceSearch/resourceSearch"
+      ]
+    }
+  ],
+  "resolveAlias": {
+    "@/*": "/*"
+  }
+}
