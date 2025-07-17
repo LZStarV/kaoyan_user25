@@ -8,24 +8,22 @@ Component({
     // 分类列表
     categoryList: {
       type: Array,
-      value: []
-    }
+      value: [],
+    },
   },
 
   /**
    * 组件的初始数据
    */
-  data: {
-  },
+  data: {},
 
   /**
    * 组件的方法列表
    */
   methods: {
-    gotoUtilsDetail(e)
-    {
-      const index= e.currentTarget.dataset.index;
-      wx.navigateTo({ url:this.properties.categoryList[index].url });
+    gotoUtilsDetail(e) {
+      const index = e.currentTarget.dataset.index;
+      wx.navigateTo({ url: this.properties.categoryList[index].url });
     },
-  }
-})
+  },
+});

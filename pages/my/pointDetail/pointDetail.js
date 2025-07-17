@@ -1,10 +1,10 @@
 // pages/my/pointDetail/pointDetail.js
-import { userStore } from "@/stores/userStore";
-import { getPoint } from "@/api/point";
+import { userStore } from '@/stores/userStore';
+import { getPoint } from '@/api/point';
 Page({
   data: {
     pointList: [], //积分列表数据
-    pointCount: "", //当前可用积分
+    pointCount: '', //当前可用积分
     total: 0, //数据总条数
     isFinish: false, //判断数据是否全部已经加载
     isLoading: false, //判断数据是否加载完毕
@@ -12,20 +12,20 @@ Page({
     requestPointData: {
       page: 1, //页码
       pageSize: 20, //每页请求的参数
-      type: "",
+      type: '',
     },
     navList: [
       {
-        name: "全部",
-        id: "",
+        name: '全部',
+        id: '',
       },
       {
-        name: "获取",
-        id: "1",
+        name: '获取',
+        id: '1',
       },
       {
-        name: "消耗",
-        id: "0",
+        name: '消耗',
+        id: '0',
       },
     ],
   },
