@@ -1,14 +1,14 @@
-<view wx:if="{{ischeck}}">
+<view wx:if="{{isCheck}}">
   <view class="container">
     <view class="header">
       <text class="title">每日激励</text>
     </view>
-  
+
     <view class="quote-section">
       <text class="quote">{{currentQuote.quote}}</text>
       <text class="author">{{currentQuote.author}}</text>
     </view>
-  
+
     <view class="buttons">
       <button bindtap="randomQuote" class="random-button">随机语录</button>
     </view>

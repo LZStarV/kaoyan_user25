@@ -1,9 +1,38 @@
 {
   "name": "kaoyan_user",
   "version": "1.0.0",
-  "main": ".eslintrc.js",
+  "main": "app.js",
+  "type": "module",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint --config .commitlintrc.js -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "eslint"
+    ],
+    "*.{wxss,css,less,scss}": [
+      "stylelint --config .stylelintrc.cjs --fix"
+    ],
+    "*.{ts,tsx,js,json,html,yml,wxml,wxss,css,less,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "cz-customizable": {
+      "config": ".cz-config.cjs"
+    },
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --fix",
+    "lint:strict": "eslint . --max-warnings 0",
+    "lint-staged": "lint-staged",
+    "commit": "git-cz"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +44,27 @@
     "miniprogram-computed": "^5.0.0",
     "mobx": "^6.13.7",
     "mobx-miniprogram": "^6.12.3",
-    "mobx-miniprogram-bindings": "^4.0.1"
+    "mobx-miniprogram-bindings": "^4.0.1",
+    "prettier": "^3.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/eslint-parser": "^7.28.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.31.0",
+    "commitizen": "^4.3.1",
+    "commitlint-config-cz": "^0.13.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.4.0",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.5",
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "stylelint": "^16.21.1",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-prettier": "^5.0.3"
   }
 }

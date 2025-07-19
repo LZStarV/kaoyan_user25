@@ -1,10 +1,6 @@
 // pages/my/advice/Advice.js
-import {
-  submitFeedback
-} from '../../../api/user'
-import {
-  reqUploadFile
-} from '../../../api/user'
+import { submitFeedback } from '../../../api/user';
+import { reqUploadFile } from '../../../api/user';
 
 Page({
   /**
@@ -19,10 +15,9 @@ Page({
 
   // 通过触发事件的对象名获取要改变的数据
   handleInput(event) {
-
     const name = event.currentTarget.dataset.name;
     this.setData({
-      [name]: event.detail.value // 更新数据
+      [name]: event.detail.value, // 更新数据
     });
   },
 
@@ -32,15 +27,15 @@ Page({
     // 后端返回上传的结果，包含图片在后端服务器的路径，将该路径与反馈一同发送到服务端
     if (this.data.tempFile) {
       uploadResponse = await reqUploadFile(this.data.tempFile.path);
-    };
+    }
 
     submitFeedback({
       description: this.data.feedback,
       img: uploadResponse?.data || '',
-      contact: this.data.contact
-    }).then(
-      () => wx.navigateBack()
-    ).catch();
+      contact: this.data.contact,
+    })
+      .then(() => wx.navigateBack())
+      .catch();
   },
   handleChooseImg() {
     //!调用小程序内置的选择图片API，会返回选择图片的本地路径 http开头的一个url，可以配合wx.uploadFile 进行上传到自己的服务器
@@ -56,65 +51,48 @@ Page({
         this.setData({
           imageUrl: result.tempFilePaths,
           tempFile: result.tempFiles[0],
-        })
+        });
         console.log(this.data.tempFile);
-      }
+      },
     });
-
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-
-  },
+  onLoad(options) {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady() {
-
-  },
+  onReady() {},
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow() {
-
-  },
+  onShow() {},
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide() {
-
-  },
+  onHide() {},
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload() {
-
-  },
+  onUnload() {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh() {
-
-  },
+  onPullDownRefresh() {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom() {
-
-  },
+  onReachBottom() {},
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage() {
-
-  }
-})
+  onShareAppMessage() {},
+});

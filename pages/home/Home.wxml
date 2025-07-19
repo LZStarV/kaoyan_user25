@@ -2,8 +2,8 @@
 <import src="./skeleton/Home.skeleton"/>
 
 <!--使用骨架屏-->
-<template is="skeleton" wx:if="{{loading&&!ischeck}}"></template>
-<view wx:if="{{ischeck}}">
+<template is="skeleton" wx:if="{{loading&&!isCheck}}"></template>
+<view wx:if="{{isCheck}}">
     <view class="container">
       <view class="title">考研倒计时</view>
       <view class="sentence" wx:for="{{sentences}}" wx:key="*this">
@@ -22,10 +22,10 @@
     </view>
     <view class="search-container" bindtap = "gotoSearch">
       <view class="search-left">
-        <image src="../../images/home/search.png" />
-        <input type="text" placeholder="搜索"/>
+        <image src="../../images/home/search.png"></image>
+        <input type="text" placeholder="搜索"></input>
       </view>
-    </view>  
+    </view>
     <view class="avatar">
       <image src="../../images/home/avatar.png" />
     </view>

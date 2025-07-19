@@ -6,7 +6,7 @@ function openFile(filePath) {
     },
     fail: function (err) {
       console.error('打开文件失败：', err);
-    }
+    },
   });
 }
-export {openFile}
+export { openFile };

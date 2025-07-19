@@ -1,6 +1,5 @@
 // pages/index/banner/banner.js
 
-
 Component({
   /**
    * 组件的属性列表
@@ -9,12 +8,12 @@ Component({
     // 轮播图数据
     bannerList: {
       type: Array,
-      value: []
+      value: [],
     },
     marginTop: {
       type: Number,
-      value: 0 // 默认值
-    }
+      value: 0, // 默认值
+    },
   },
 
   /**
@@ -35,13 +34,10 @@ Component({
   methods: {
     // 获取被激活的轮播图索引
     getSwiperIndex(event) {
-      const {
-        current
-      } = event.detail;
+      const { current } = event.detail;
       this.setData({
-        activeIndex: current
-      })
+        activeIndex: current,
+      });
     },
-
   },
-})
+});
