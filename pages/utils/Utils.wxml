@@ -1,16 +1,16 @@
-<view wx:if="{{ischeck}}">
+<view wx:if="{{isCheck}}">
   <view class="container">
     <view class="header">
       <view class="title">考研加油</view>
       <view class="subtitle">每天进步一点点，考研必胜！</view>
     </view>
-  
+
     <!-- 考研倒计时 -->
     <view class="countdown">
       <view class="countdown-title">距离考研还有</view>
       <view class="countdown-time">{{days}}天</view>
     </view>
-  
+
     <!-- 励志句子 -->
     <view class="section">
       <view class="section-title">每日励志</view>
@@ -18,7 +18,7 @@
         {{item}}
       </view>
     </view>
-  
+
     <!-- 学长学姐经验分享 -->
     <view class="section">
       <view class="section-title">学长学姐经验分享</view>
@@ -28,7 +28,7 @@
       </view>
     </view>
 
-  
+
     <!-- 学习打卡 -->
     <view class="section">
       <view class="section-title">学习打卡</view>
@@ -65,10 +65,10 @@
         </scroll-view>
     </view>
     </view>
-    
+
     <!--功能入口-->
     <entrance categoryList="{{ categoryList }}"/>
-    
+
     <view class="footer">
       <view class="small-header">
         <text class="title">积分商城</text>
@@ -91,5 +91,5 @@
           </view>
         </view>
       </view>
-    </view>    
+    </view>
 </view>

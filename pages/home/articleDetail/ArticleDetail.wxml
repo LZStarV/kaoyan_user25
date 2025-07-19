@@ -1,9 +1,9 @@
-<view wx:if="{{ischeck}}">
+<view wx:if="{{isCheck}}">
   <view class="container">
     <view class="header">
       <text class="title">专注计时器</text>
     </view>
-  
+
     <view class="timer-section">
       <text class="timer">{{time}}</text>
       <view class="buttons">
@@ -12,7 +12,7 @@
         <button bindtap="resetTimer" class="reset-button">重置</button>
       </view>
     </view>
-  
+
     <view class="bottom-section">
       <text class="quote">每日一句：{{quote}}</text>
     </view>

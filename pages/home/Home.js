@@ -10,7 +10,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    ischeck: false,
+    isCheck: false,
     postSign: '',
     sign: false, //没有签到
     loading: true, //是否显示骨架屏，默认显示
@@ -94,7 +94,7 @@ Page({
     });
   },
   //回到顶部
-  goTop: function (e) {
+  goTop: function (_e) {
     // 一键回到顶部
     if (wx.pageScrollTo) {
       wx.pageScrollTo({ scrollTop: 0 });
@@ -140,7 +140,7 @@ Page({
     //发生请求
     const { data } = await getArticle(this.data.requestArticleData);
 
-    //在请求结束以后，需要将isLoaing设置为false,表示请求已经结束
+    //在请求结束以后，需要将isLoading设置为false,表示请求已经结束
     this.data.isLoading = false;
 
     this.setData({
@@ -160,7 +160,7 @@ Page({
     const targetTime = new Date(time);
     const now = new Date();
     this.setData({
-      ischeck: now < targetTime ? true : false,
+      isCheck: now < targetTime,
     });
   },
   //获取轮播图和分类数据
@@ -195,9 +195,9 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
+  onLoad(_options) {
     this.getCheck();
-    if (!this.data.ischeck) {
+    if (!this.data.isCheck) {
       this.cal();
       this.getDataList();
       this.getArticleList();
@@ -216,14 +216,14 @@ Page({
           sign: res.data,
         });
       })
-      .catch((err) => {
+      .catch((_err) => {
         this.setData({
           postSign: false,
         });
       });
   },
   onShow() {
-    if (!this.data.ischeck) {
+    if (!this.data.isCheck) {
       this.getSign();
       if (this.data.postSign === false) {
         this.getSign();

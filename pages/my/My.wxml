@@ -1,5 +1,5 @@
 
-<view class="body" wx:if="{{!ischeck}}">
+<view class="body" wx:if="{{!isCheck}}">
   <view class="login" >
     <view class="header">
       <view wx:if="{{ !token||token&&!userInfo }}" class="user-container section" bindtap="toLoginPage">
@@ -26,9 +26,9 @@
     </view>
       <view class="cell-body">
           <view class="cell-list">
-              <view 
-                  class="cell" 
-                  wx:for="{{ cellList }}" 
+              <view
+                  class="cell"
+                  wx:for="{{ cellList }}"
                   wx:key="index"
                   data-page="{{ item.page }}"
                   bindtap="toDetail"
